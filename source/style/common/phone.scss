@@ -24,6 +24,7 @@ html {
     position: relative;
     color: #455a64;
   overflow: hidden;
+  top: 60px;
 }
 .container-name{
 	font-family: 'bernier_regularregular';
@@ -162,3 +163,39 @@ html {
 .menu-item-link {
   color: #fff;
   text-decoration: none; }
+
+
+
+/*форма*/
+
+.field-img{
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  input{
+    height:48px;
+
+  }
+}
+.field-img:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 48px;
+  height:48px;
+  background: #333;
+  top:0;
+  left: 0;
+  padding-bottom: 10px;
+}
+.field-img:before{
+  content: "";
+  position: absolute;
+  display: block;
+  width:48px;
+  height: 48px;
+  top:0;
+  left:0;
+  background: springgreen;
+  padding-bottom: 10px;
+}
