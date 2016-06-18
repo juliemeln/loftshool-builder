@@ -22,6 +22,7 @@
     "rimraf": "2.5.2"
   },
   "dependencies": {
-    "normalize.css": "^4.1.1"
+    "normalize.css": "^4.1.1",
+    "remove-svg-properties": "^0.3.2"
   }
 }

@@ -13,12 +13,13 @@ global.$ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
 };
 
 $.path.task.forEach(function(taskPath) {
   require(taskPath)();
 });
+
 
 $.gulp.task('default', $.gulp.series(
   'clean',
@@ -35,3 +36,5 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+

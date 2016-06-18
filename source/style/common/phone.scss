@@ -82,7 +82,7 @@ html {
 .autorize-button {
   display: inline-block;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 10px 16px;
   outline: none;
   border: 2px solid #fff;
   @include border-radius(5px);
@@ -124,44 +124,40 @@ html {
 
 .menu {
   padding-left: 0;
-  list-style: none;
   margin: 0;
   padding-top: 10px;
   font-size: 0;
-
 }
 
 .menu-list{
   margin:0;
   padding:0;
+  list-style: none;
+  width: 100%;
+
 }
 .menu-item {
   height: 45px;
   display: inline-block;
-  border-left: 1px solid #73c8c0;
+  border-right: 1px solid #73c8c0;
   font-size: 16px;
   font-family: 'robotomedium';
   background: rgba(0, 150, 136, 0.85);
   text-align: center;
-  width: 30%;
-}
+  width: calc(100% / 3);
+  box-sizing: border-box;
 
-.menu-item:first-child {
-  float: left;
-  width:40%;
 }
 
 .menu-item:last-child {
-  float: right;
-  width: 30%}
+  border-right: none;
+}
 
 .menu-item:hover{
   background-color: #009688;
 }
 
-.menu .menu-item-link {
-  padding: 12px 0px;
-  display: block; }
+
 
 .menu-item-link {
   color: #fff;
