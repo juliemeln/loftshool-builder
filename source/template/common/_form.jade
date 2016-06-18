@@ -1,0 +1,18 @@
+form(name="input", action="html_form_action.asp", method="get")
+  div.form-field
+    img(src="assets/img/login.svg")
+    input(type="text", name="user", placeholder="Логин",class="area",required)
+    img(src="assets/img/password.svg")
+    input(type="text", name="pswd", placeholder="Пароль",class="area",required)
+  div.checkbox
+    input(type="checkbox", name="human", id="human")
+    label я человек
+
+  div.question Вы точно не робот?
+  ul.robot
+    li.robot-item
+      input(type="radio", value="да")
+      label Да
+    li.robot-item
+      input(type="radio", value="не уверен")
+      label Не уверен
