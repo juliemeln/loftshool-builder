@@ -1,0 +1,78 @@
+@import "_misc/mixins";
+@import "../../node_modules/normalize.css/normalize.css";
+@import "fonts/stylesheet";
+@import "avatar";
+
+html {
+
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'robotolight';
+  overflow-x: hidden;
+}
+.header{
+  position: absolute;
+  width:320px;
+}
+.socials-icon-about-list{
+  margin:0;
+  padding:0;
+  margin-top: 15px;
+  margin-left: 10px;
+  float: left;
+
+}
+.socials-item{
+  height: 100%;
+  font-size: 0;
+  padding-right: 30px;
+    img{
+      width: 25px;
+    }
+}
+
+.nav-hamburger{
+  float: right;
+  position: relative;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.wrapper{
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.first-container{
+  background: url("/assets/img/bckgiphone.jpg") no-repeat;
+  height: 558px;
+
+}
+.box{
+  margin-top: -25px;
+}
+.works-container{
+  background-color: #efeee9;
+}
+.works-title{
+  position: relative;
+  width:200px;
+  margin: 0 auto;
+  height: 60px;
+  img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:200px;
+    z-index: -1;
+  }
+}
+.works-title-header{
+  font-family: 'bernier_distressedregular';
+  font-size: 35px;
+  color: #373e42;
+  position: absolute;
+  text-align: center;
+}
