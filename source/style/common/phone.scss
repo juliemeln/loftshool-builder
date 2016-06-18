@@ -18,11 +18,12 @@ html {
 }
 .container-phone-form{
 	width: 300px;
-	height: 360px;
+	height: 395px;
 	background-color: rgba(255,255,255,.8);
-	@include border-top-radius(10px);
+	@include border-radius(10px);
     position: relative;
     color: #455a64;
+  overflow: hidden;
 }
 .container-name{
 	font-family: 'bernier_regularregular';
@@ -75,6 +76,8 @@ html {
   position: relative;
   margin: 0 auto;
   width: 145px;
+  padding-top: 10px;
+  padding-bottom: 35px;
 }
 .autorize-button {
   display: inline-block;
@@ -97,6 +100,9 @@ html {
   padding-top: 35px;
   height: 25px;
   font-size: 0px;
+  padding-top: 40px;
+  width: 145px;
+  margin: 0 auto;
 }
 
 .socials-item {
@@ -106,6 +112,9 @@ html {
   width: 25px;
   padding-right: 25px;
 }
+.socials-item:last-child{
+  padding-right: 0;
+}
 
 .socials .socials-item:first-child {
   margin-left: 0; }
@@ -114,13 +123,13 @@ html {
 /*МЕНЮ*/
 
 .menu {
-  overflow: hidden;
   padding-left: 0;
   list-style: none;
   margin: 0;
-  padding: 0;
-  font-size: 0px;
-  font-size: 0; }
+  padding-top: 10px;
+  font-size: 0;
+
+}
 
 .menu-list{
   margin:0;
@@ -128,22 +137,24 @@ html {
 }
 .menu-item {
   height: 45px;
-  padding: 0 30px;
   display: inline-block;
   border-left: 1px solid #73c8c0;
   font-size: 16px;
   font-family: 'robotomedium';
   background: rgba(0, 150, 136, 0.85);
+  text-align: center;
+  width: 30%;
 }
 
 .menu-item:first-child {
-  border-left: none;
-  border-bottom-left-radius:10px;
+  float: left;
+  width:40%;
 }
 
 .menu-item:last-child {
-  border-bottom-right-radius:10px;
-}
+  float: right;
+  width: 30%}
+
 .menu-item:hover{
   background-color: #009688;
 }

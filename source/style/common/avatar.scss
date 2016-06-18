@@ -6,7 +6,7 @@
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-  top:40px;
+  padding-top:40px;
 }
 
 .avatar {
@@ -14,4 +14,10 @@
 
 .container-foto-name{
   font-size: 21px;
+  padding-top: 30px;
+  text-align: center;
+}
+.container-foto-text{
+  padding-top: 18px;
+  text-align: center;
 }
