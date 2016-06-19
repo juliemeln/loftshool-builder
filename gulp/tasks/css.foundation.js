@@ -6,5 +6,6 @@ module.exports = function() {
       .pipe($.gp.concatCss('foundation.css'))
       .pipe($.gp.csso())
       .pipe($.gulp.dest($.config.root + '/assets/css'))
+
   })
 };

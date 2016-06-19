@@ -1,0 +1,17 @@
+
+
+/*для заголовка с картинкой блок обертка - ширина и высота*/
+
+.title-img{
+  position: relative;
+  background: url("/assets/img/about_header.svg");
+  background-size: 100% 100%;
+  width: inherit;
+  height:inherit;
+}
+.title-text{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+

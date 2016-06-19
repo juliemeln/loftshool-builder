@@ -1,6 +1,6 @@
 @import "_misc/mixins";
 @import "../../node_modules/normalize.css/normalize.css";
-@import "fonts/stylesheet";
+@import "../fonts/stylesheet";
 @import "avatar";
 
 html {
@@ -10,11 +10,11 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: 'robotolight';
-  overflow-x: hidden;
 }
 .header{
   position: absolute;
   width:320px;
+  z-index: 1;
 }
 .socials-icon-about-list{
   margin:0;
@@ -48,25 +48,40 @@ body {
 .first-container{
   background: url("/assets/img/bckgiphone.jpg") no-repeat;
   height: 558px;
+  color: #fff;
+  position: relative;
 
 }
 .box{
-  margin-top: -25px;
+  bottom: 0;
+  height: 26px;
+  position: absolute;
+  width: 100%;
+  svg{
+    fill:#efeee9;
+  }
 }
+
+.arrow-container{
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  text-align: center}
+
 .works-container{
   background-color: #efeee9;
 }
-.works-title{
+.works-title {
   position: relative;
-  width:200px;
+  width: 200px;
   margin: 0 auto;
   height: 60px;
-  img{
+  img {
+
     position: absolute;
-    top:0;
-    left:0;
-    width:200px;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 200px;
   }
 }
 .works-title-header{
@@ -75,34 +90,91 @@ body {
   color: #373e42;
   position: absolute;
   text-align: center;
+  top:50%;
+  transform: translateY(-50%);
 }
 
 
+.portfolio{
+  text-align: center;
+  padding: 50px 0;
+  img{
+    width: 245px;
+  }
+}
 
+.skills-list{
+  border-top:1px solid #00bfa5;
+  border-bottom:1px solid #00bfa5;
+  padding: 10px 0;
+  text-align: center;
+  li{
+    list-style:none;
+    display: inline-block;
+    color: #00bfa5;
 
-
-.site-link{
+  }
+}
+.btn {
   background: #00bfa5;
   border-radius: 10px;
-  width:185px;
-  height:40px;
+  width: 185px;
+  height: 40px;
+  padding: 10px;
+  color: #fff;
+  display: block;
   margin: 0 auto;
+  text-decoration: none;
   color: #fff;
   margin-bottom: 20px;
+  line-height:40px;
+  text-align: center;
+  img{
+    padding-left: 10px;
+  }
+
 }
 .portfolio-list{
   height: 90px;
   font-size: 0;
   background: #1a2c51;
-
 }
-.arrow-down .arrow-up{
+.works-title{
+  width: 200px;
+  height:100px;
+}
+.arrow-down{
   display: inline-block;
   width: 50%;
   height: 90px;
-
+}
+.arrow-up{
+  display: inline-block;
+  width: 50%;
+  height: 90px;
 }
 
+.quote{
+  font-size:16px;
+}
+
+.quote-av{
+  display: inline-block;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #0000AA;
+  width: 50px;
+  height: 50px;
+
+}
+.talk-author{
+  display:inline-block;
+  width: 60%;
+  color: #00bfa5;
+}
+.talk-author:after{
+  clear: both;
+}
 .form-gradient{
   width:300px;
   height:416px;
@@ -111,12 +183,9 @@ body {
   border-radius: 10px;
 }
 
-
-.form-menu{
-  li{
-    list-style:none;
-    display: inline-block;
-    background: #278f8d;
-    height:45px;
-  }
+.form-menu-item {
+  list-style: none;
+  display: inline-block;
+  background: #278f8d;
+  height: 45px;
 }
