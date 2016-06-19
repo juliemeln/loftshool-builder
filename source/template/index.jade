@@ -5,61 +5,15 @@ html
         <!--[if lt IE 7]>
         <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
         <![endif]-->
-div.wrapper
 
-    header.header
-        ul.socials-icon-about-list
-            li.socials-item
-                img(src="/assets/img/vk.svg").social-link
-            li.socials-item
-                img(src="/assets/img/vk.svg").social-link
-            li.socials-item
-                img(src="/assets/img/vk.svg").social-link
-        div.nav-hamburger
-            img(src="/assets/img/hamburger.svg")
-    div.first-container
-        div.av-box
-            img(src="/assets/img/viking.png").avatar
-        div.container-foto-name Юлия Мельник
-        div.container-foto-text Личный сайт веб разработчика
-        .arrow-container
-            img(src="/assets/img/arrow_down.svg")
-        div.box
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
-            <polygon points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-            <polygon points="1000,0   1000,86   500,86   500,75.5"></polygon>
-            </svg>
-    div.works-container
-        .works-title
-            .title-img
-                h1.works-title-header Мои работы
-        div.portfolio
-            img(src="/assets/img/portfolio.png")
-        h2.portfolio-title Сайт
-        ul.skills-list
-            li.skill HTML,
-            li.skill CSS,
-            li.skill JAVASCRIPT
-
-        a(href="#").btn Посмотреть сайт
-            img(src="/assets/img/link.svg")
-        div.portfolio-list
-            div.arrow-down
-                img(src="/assets/img/portf_arrow_down.svg")
-            div.arrow-up
-                img(src="/assets/img/portf_arrow_up.svg")
-
-        .portfolio-title
-            h1 Что обо мне говорят
-            div.quote-sign "
-            div.quote Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-            div.quote-av
-                img(src="/assets/img/viking.png").quote-av-img
-            div.talk-author Ковальчук Дмитрий основатель Loftschool
-            div.quote-sign "
-            div.quote Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-            div.quote-av
-                img(src="/assets/img/viking.png").quote-av-img
-            div.talk-author Зар Захаров главный преподаватель
-            div.quote "
-        include common/_form-works
+    div.wrapper
+        div.container-phone
+            div.container-phone-form
+                div.container-name - Авторизуйтесь -
+                include common/_form
+                ul.menu-atorization-list
+                    li.menu-autorization-item-main
+                        | На главную
+                    li.menu-autorization-item-enter
+                        | Войти
+            include ./common/_footer.jade

@@ -22,16 +22,17 @@ div.wrapper
             img(src="/assets/img/viking.png").avatar
         div.container-foto-name Юлия Мельник
         div.container-foto-text Личный сайт веб разработчика
-        img(src="/assets/img/arrow_down.svg")
-    div.box
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
-        <polygon points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-        <polygon points="1000,0   1000,86   500,86   500,75.5"></polygon>
-        </svg>
+        .arrow-container
+            img(src="/assets/img/arrow_down.svg")
+        div.box
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+            <polygon points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>
     div.works-container
-        div.works-title
-            h1.works-title-header Мои работы
-            img(src="/assets/img/about_header.svg")
+        .works-title
+            .title-img
+                h1.works-title-header Мои работы
         div.portfolio
             img(src="/assets/img/portfolio.png")
         h2.portfolio-title Сайт
@@ -39,16 +40,17 @@ div.wrapper
             li.skill HTML,
             li.skill CSS,
             li.skill JAVASCRIPT
-        div.site-link
-            a(href="#") Посмотреть сайт
-                img(src="/assets/img/link.svg")
+
+        a(href="#").btn Посмотреть сайт
+            img(src="/assets/img/link.svg")
         div.portfolio-list
             div.arrow-down
                 img(src="/assets/img/portf_arrow_down.svg")
             div.arrow-up
                 img(src="/assets/img/portf_arrow_up.svg")
 
-        h2.portfolio-title - Что обо мне говорят -
+        .portfolio-title
+            h1 Что обо мне говорят
             div.quote-sign "
             div.quote Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
             div.quote-av

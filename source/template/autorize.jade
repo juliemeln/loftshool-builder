@@ -7,14 +7,16 @@ html
     <![endif]-->
 
   div.wrapper
+
     div.container-phone
-      div.autorize
-            a(href="").autorize-button Авторизоваться
+      .btn-container
+        a(href="").autorize-btn Авторизоваться
       div.container-phone-form
         div.av-box
-              img(src="/assets/img/viking.png").avatar
-        div.container-foto-name Юлия Мельник
-        div.container-foto-text Личный сайт веб разработчика
+          img(src="/assets/img/viking.png").avatar
+        .foto-info
+          div.container-foto-name Юлия Мельник
+          div.container-foto-text Личный сайт веб разработчика
         ul.socials
           li.socials-item
             a(href="http://vk.com/",target="blank").socials-link-vk
@@ -28,10 +30,10 @@ html
         div.menu
           ul.menu-list
             li.menu-item
-                a(href="#").menu-item-link Мои работы
+              a(href="#").menu-item-link Мои работы
             li.menu-item
-                a(href="#").menu-item-link Обо мне
+              a(href="#").menu-item-link Обо мне
             li.menu-item
-                a(href="#").menu-item-link Блог
+              a(href="#").menu-item-link Блог
 
       include ./common/_footer.jade

@@ -1,7 +1,7 @@
 
 .av-box {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50% 50%;
   overflow: hidden;
   margin: 0 auto;
@@ -11,10 +11,13 @@
 
 .avatar {
   width: 100%; }
+.foto-info{
+  height:45px;
+  padding-top: 20px;
 
+}
 .container-foto-name{
   font-size: 21px;
-  padding-top: 30px;
   text-align: center;
 }
 .container-foto-text{
