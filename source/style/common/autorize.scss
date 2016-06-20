@@ -1,34 +1,93 @@
+@import 'common/additional';
 @import "_misc/mixins";
-@import "../../node_modules/normalize.css/normalize.css";
-@import "../fonts/stylesheet";
-@import "form";
-@import "avatar";
-html {
-	position: relative;
-	min-height: 100%;
-}
-.wrapper{
+
+
+
+.btn-container{
+  text-align: center;
   position: relative;
+  z-index: 1;
+  float: right;
+  @include desktop {
+    margin-right:100px;
+    margin-top:25px;
+
+  }
+  @include laptop {
+    margin-right:100px;
+    margin-top:25px;
+
+  }
+  @include tablet {
+    margin-right:20px;
+    margin-top:25px;
+  }
+  @include phones {
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  @include clearfix;
 }
 
-.container-phone{
-	width: 300px;
-	height: 568px;
-	background: url('/assets/img/bckgiphone.jpg') no-repeat center;
-	margin: 0 auto;
-	padding: 0 10px;
-    position: relative;
+.autorize-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid #fff;
+  @include border-radius(5px);
+  color: #fff;
+  font-size: 16px;
+
 }
-.container-phone-form{
+
+.autorize-button:hover {
+  color: #009688;
+}
+
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 0;
+  @include desktop {
+    background: url('/assets/img/bckg-1800.jpg') no-repeat top;
+    min-height: 900px;
+  }
+  @include laptop {
+    background: url('/assets/img/bckg-1200.jpg') no-repeat top;
+    min-height: 789px;
+  }
+  @include tablet {
+    background: url('/assets/img/bckg-tablet.jpg') no-repeat top;
+    min-height: 1024px;
+  }
+  @include phones {
+    background: url('/assets/img/bckg-iphone.jpg') no-repeat top;
+    min-height: 568px;
+  }
+  &::before{
+    content: " ";
+    display: inline-block;
+    height:100%;
+
+  }
+  @include clearfix
+}
+.container-white{
 	width: 300px;
 	height: 395px;
 	background-color: rgba(255,255,255,.8);
 	@include border-radius(10px);
     position: relative;
     color: #455a64;
-  overflow: hidden;
-  top: 60px;
+    overflow: hidden;
+    margin: 0 auto;
+  margin-top: 60px;
+
 }
+
+
+
 .container-name{
 	font-family: 'bernier_regularregular';
 	font-size: 30px;
@@ -77,24 +136,6 @@ html {
   margin: 0 auto;
 }
 
-.btn-container{
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  padding-top: 20px;
-}
-.autorize-btn {
-  text-decoration: none;
-  padding: 8px 16px;
-  border: 2px solid #fff;
-  @include border-radius(5px);
-  color: #fff;
-  font-size: 16px;
-}
-
-.autorize-button:hover {
-  color: #009688;
-}
 /*соц сети*/
 .socials {
   height: 25px;
@@ -122,8 +163,6 @@ html {
 /*МЕНЮ*/
 
 .menu {
-  padding-left: 0;
-  margin: 0;
   font-size: 0;
 }
 
@@ -132,6 +171,7 @@ html {
   padding:0;
   list-style: none;
   width: 100%;
+  @include clearfix;
 
 }
 .menu-item {
@@ -170,8 +210,8 @@ html {
   position: relative;
   display: block;
   padding-bottom: 10px;
-  input{
-    height:48px;
+    input{
+      height:48px;
 
   }
 }
@@ -197,3 +237,11 @@ html {
   background: springgreen;
   padding-bottom: 10px;
 }
+
+/*
+footer{
+  height: $footer-height;
+  margin-top: -$footer-height;
+} */
+
+@import 'common/media'

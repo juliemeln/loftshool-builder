@@ -1,15 +1,13 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
 
-body {
-  margin: 0;
-}
-
-@import 'common/greating';
+@import 'common/_misc/mixins';
 @import 'common/autorize';
 @import 'common/about';
 @import 'common/works';
-@import 'common/additional'
+@import 'common/media';
+@import 'common/stylesheet';
+@import 'common/additional';
+@import 'common/avatar';
+@import 'common/form';
+@import 'common/footer';
+@import 'common/avatar'
 

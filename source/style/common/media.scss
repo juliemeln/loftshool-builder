@@ -1,0 +1,97 @@
+/*
+
+
+
+
+
+
+
+
+  @include desktop {
+  }
+  @include laptop {
+  }
+  @include tablet {
+  }
+  @include phones {
+  }
+
+
+
+
+@media screen and (min-width:300px)and(max-width: 600px){
+  .container-phone {
+    background: url('/assets/img/bckg-iphone.jpg') no-repeat center;
+
+  }
+  .btn-container{
+    top: 20px;
+  }
+}
+
+@media screen and (min-width:1200px){
+  .container-phone {
+    background: url('/assets/img/bckg-1800.jpg') no-repeat center;
+    min-height:900px;
+    height: 100%;
+  }
+  .btn-container{
+    right: 100px;
+    top: 25px;
+  }
+
+}
+
+@media screen and (min-width:600px)and(max-width: 900px){
+  .container-phone {
+    background: url('/assets/img/bckg-1200.jpg') no-repeat center;
+  }
+  .btn-container{
+    right: 100px;
+    top: 25px;
+  }
+}  */
+
+/*
+@media screen and (max-width: 1200px) {
+  .container {
+    background: url('/assets/img/bckg-1800.jpg') no-repeat center;
+    min-height:789px;
+  }
+  .btn-container{
+    right: 100px;
+    top: 25px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    background: url('/assets/img/bckg-1200.jpg') no-repeat center;
+
+  }
+  .btn-container{
+    right: 100px;
+    top: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    background: url('/assets/img/bckg-tablet.jpg') no-repeat center;
+
+  }
+  .btn-container{
+    top: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    background: url('/assets/img/bckg-iphone.jpg') no-repeat center;
+
+  }
+}
+
+
+
+
+
+
+*/

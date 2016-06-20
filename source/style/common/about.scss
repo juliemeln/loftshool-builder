@@ -1,0 +1,90 @@
+
+.about-title {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+.about-img{
+  display: block;
+}
+.about-title-header{
+  font-family: 'bernier_distressedregular';
+  font-size: 35px;
+  color: #373e42;
+  position: absolute;
+  text-align: center;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+.contacts-item{
+  list-style: none;
+
+  &::before{
+    background: url("/assets/img/skype.svg");
+
+  }
+}
+
+.about-wrapper{
+  display: block;
+  width:100%;
+  height:500px;
+  background-color: #efeee9;
+
+}
+
+.about-container{
+  width:50%;
+  float: left;
+  @include tablet {
+    width:100%;
+  }  @include phones {
+    width:100%;
+  }
+}
+.about-info{
+  width:50%;
+  float: right;
+}
+.skills{
+  width:50%;
+  float: right;
+
+  @include tablet {
+    width:100%;
+  }  @include phones {
+    width:100%;
+  }
+}
+.skills-item{
+  list-style:none;
+}
+
+.map{
+  display: block;
+  width:1800px;
+  height:1075px;
+  position: relative;
+  z-index: -1;
+  margin:0 auto;
+  &:after{
+    content: "";
+    display: block;
+    height: 147px;
+  }
+
+}
+.contact-container{
+  width:380px;
+  height: 290px;
+  background-color: rgba(#fff,.8);
+  position: absolute;
+  top:50%;
+
+
+
+}

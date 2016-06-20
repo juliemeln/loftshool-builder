@@ -1,17 +1,61 @@
+@import "_misc/mixins";
+//footer
+$footer-height:45px;
+
+@function rem($px){
+  @return $px/16px +0rem;
+}
 
 
-/*для заголовка с картинкой блок обертка - ширина и высота*/
-
-.title-img{
+html {
   position: relative;
-  background: url("/assets/img/about_header.svg");
-  background-size: 100% 100%;
-  width: inherit;
-  height:inherit;
-}
-.title-text{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
+  min-height: 100%;
+  font-size: 16px;
+  @include desktop{
+    font-size: 16px;
+  }
+  @include laptop{
+    font-size: 15px;
+  }
+  @include tablet{
+    font-size: 14px;
+  }
+  @include phones{
+    font-size: 14px;
+  }
 }
 
+h1.foto-name{
+  font-family: 'robotomedium';
+  font-size: rem(28px);
+  text-align: center;
+  margin:0;
+  color: #fff;
+@include clearfix}
+
+h1.about-title-header{
+  font-size: rem(63px);
+  font-family: 'bernier_regularregular';
+}
+
+.header{
+  position: absolute;
+  width:100%;
+  z-index: 1;
+
+}
+
+
+.wrapper{
+  position: relative;
+  min-height:100%;
+  overflow: hidden;
+  width:100%;
+  @include clearfix
+}
+
+
+h2.title{
+  font-family: 'bernier_regularregular';
+  font-size:rem(35px);
+}

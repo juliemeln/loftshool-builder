@@ -1,21 +1,4 @@
-@import "_misc/mixins";
-@import "../../node_modules/normalize.css/normalize.css";
-@import "../fonts/stylesheet";
-@import "avatar";
 
-html {
-
-}
-body {
-  margin: 0;
-  min-width: 320px;
-  font-family: 'robotolight';
-}
-.header{
-  position: absolute;
-  width:320px;
-  z-index: 1;
-}
 .socials-icon-about-list{
   margin:0;
   padding:0;
@@ -39,33 +22,47 @@ body {
   padding-top: 10px;
   padding-right: 10px;
 }
-.wrapper{
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-}
+/*
 
 .first-container{
   background: url("/assets/img/bckgiphone.jpg") no-repeat;
   height: 558px;
   color: #fff;
   position: relative;
+}*/
 
-}
 .box{
-  bottom: 0;
-  height: 26px;
+  bottom: -5px;
   position: absolute;
   width: 100%;
   svg{
     fill:#efeee9;
   }
+  @include clearfix;
 }
+
+/*для заголовка с картинкой блок обертка - ширина и высота*/
+
+.title-img{
+  position: relative;
+  background: url("/img/about_header.svg");
+  background-size: 100% 100%;
+  width: 200px;
+  height:100px;
+}
+
+.title-text{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
 
 .arrow-container{
   width: 100%;
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   text-align: center}
 
 .works-container{

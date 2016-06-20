@@ -1,14 +1,14 @@
 'use strict';
 
-
 module.exports = function() {
-  gulp.task('remove-svg-properties', function () {
-    gulp.src('./src/*.svg')
-        .pipe(rsp.remove({
-          properties: [rsp.PROPS_FILL]
-        }))
-        .pipe(gulp.dest('./dest'));
-  });
+  $.gulp.task('remove-svg-properties', function () {
+      return $.gulp.src('./source/images/*.svg')
+        .pipe($.rsp.remove({
+            stylesheets: true,
+            properties: [$.rsp.PROPS_FILL,'fill'],
+          namespaces: ['i', 'sketch', 'inkscape']
 
-  gulp.task('default', 'remove-svg-properties');
+        }))
+        .pipe($.gulp.dest($.config.root + '/assets/img/svg'));
+  });
 };

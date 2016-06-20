@@ -1,0 +1,44 @@
+.footer-main{
+  background: rgba(#373e42,.85);
+  height:147px;
+  margin-top:-147px;
+  @include clearfix
+}
+
+.line1{
+  height:73px;
+  width:100%;
+  border-bottom: 1px solid #fff;
+
+}
+.footer-nav{
+  float: left;
+  color: #fff;
+}
+.footer-nav-item, .footer-socials-item{
+  list-style:none;
+  display: inline-block;
+}
+
+.footer-socials{
+  float: right;
+}
+
+.line2{
+  height:73px;
+  border-bottom: 1px solid #fff;
+  font-family:'robotolight';
+  color: #fff;
+  opacity: .5;
+}
+.footer-text{
+  width: 50%;
+  float: left;
+  display: block;
+
+}
+.footer-copy{
+  float: right;
+  width: 50%;
+  display: block;
+}
