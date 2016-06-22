@@ -5,26 +5,27 @@ html
         <!--[if lt IE 7]>
         <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
         <![endif]-->
-div.wrapper
+.wrapper
     header.header
         ul.socials-icon-about-list
             li.socials-item
-                img(src="/assets/img/vk.svg").social-link
+                img(src="assets/img/vk.svg").social-link
             li.socials-item
-                img(src="/assets/img/vk.svg").social-link
+                img(src="assets/img/in.svg").social-link
             li.socials-item
-                img(src="/assets/img/vk.svg").social-link
+                img(src="assets/img/github.svg").social-link
         div.nav-hamburger
-            img(src="/assets/img/hamburger.svg")
-    .container
+            img(src="assets/img/hamburger.svg")
+    .container-main
         .container-first
-            .av-box
-                img(src="./assets/img/viking.png").avatar
+            .container-av
+                .av-box
+                    img(src="./assets/img/foto.jpg").avatar
             .foto-info
-                h1.foto-name Юлия Мельник
-                .container-foto-text Личный сайт веб разработчика
+                h1.foto-name-about Юлия Мельник
+                .container-foto-text-about Личный сайт веб разработчика
             .arrow-container
-                img(src="/assets/img/arrow_down.svg")
+                img(src="./assets/img/arrow_down.svg")
             .box
                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
                 <polygon points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
@@ -33,10 +34,11 @@ div.wrapper
     .about-wrapper
         .about-container
             .about-title
-                h1.about-title-header Обо мне
+                h1.title-header Обо мне
+                    img(src="assets/img/about_header.svg")
             .about-info
                 .about-img
-                    img(src="/assets/img/viking.png")
+                    img(src="assets/img/foto.jpg")
                 h2.title Кто я
                 .about-text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
         .skills
@@ -44,23 +46,81 @@ div.wrapper
             .skills-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
             ul.skills-progress
                 li.skills-item Frontend
+                    ul
+                        li
+                            .cont HTML
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                        li
+                            .cont CSS
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                        li
+                            .cont(data-pct="100")
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
                 li.skills-item Backend
+                    ul
+                        li
+                            .cont HTML
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                        li
+                            .cont CSS
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                        li
+                            .cont(data-pct="100")
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
                 li.skills-item WorkFlow
+                    ul
+                        li
+                            .cont HTML
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                        li
+                            .cont CSS
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
+                        li
+                            .cont(data-pct="100")
+                                <svg id="svg" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="300.48" stroke-dashoffset="0"></circle>
+                                <circle id="bar" r="40" cx="50" cy="50" fill="transparent" stroke-dasharray="105.48" stroke-dashoffset="0"></circle>
+                                </svg>
     .map
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:1075px;width:1800px;'><div id='gmap_canvas' style='height:1075px;width:1800px;'></div><div><small><a href="http://embedgooglemaps.com">									embedgooglemaps.com							</a></small></div><div><small><a href="http://buyproxies.io/">elite proxies</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:11,center:new google.maps.LatLng(59.9342802,30.335098600000038),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(59.9342802,30.335098600000038)});infowindow = new google.maps.InfoWindow({content:'<strong>Название</strong><br>санкт-петербург<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-        .contact-container
-            h2.title Контакты
-            ul.contacts
-                li.contacts-item
-                    img(src="/assets/img/skype.svg")
-                    | skype
-                li.contacts-item
-                    img(src="/assets/img/envelope.svg")
-                    |mail
-                li.contacts-item
-                    img(src="/assets/img/phone.svg")
-                    | phone
-                li.contacts-item
-                    img(src="/assets/img/map_marker.svg")
-                    |address
+        #googleMap
+        .contact-wrapper
+            .contact-container
+                h2.title Контакты
+                ul.contacts
+                    li.contacts-item
+                        img(src="./assets/img/skype.svg")
+                        | skype
+                    li.contacts-item
+                        img(src="./assets/img/envelope.svg")
+                        | mail
+                    li.contacts-item
+                        img(src="./assets/img/phone.svg")
+                        | phone
+                    li.contacts-item
+                        img(src="./assets/img/map_marker.svg")
+                        | address
     include common/_footer-works

@@ -1,7 +1,7 @@
-@import 'common/additional';
+@import 'additional';
 @import "_misc/mixins";
 
-
+/*КНОПКА АВТОРИЗАЦИИ*/
 
 .btn-container{
   text-align: center;
@@ -37,33 +37,61 @@
   @include border-radius(5px);
   color: #fff;
   font-size: 16px;
-
 }
 
 .autorize-button:hover {
   color: #009688;
 }
 
+/*ФОНОВАЯ КАРТИНКА*/
 
 .container {
   margin: 0 auto;
   position: relative;
   margin-top: 0;
   @include desktop {
-    background: url('/assets/img/bckg-1800.jpg') no-repeat top;
+    background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
     min-height: 900px;
   }
   @include laptop {
-    background: url('/assets/img/bckg-1200.jpg') no-repeat top;
+    background: url('../../assets/img/bckg-1200.jpg') no-repeat top;
     min-height: 789px;
   }
   @include tablet {
-    background: url('/assets/img/bckg-tablet.jpg') no-repeat top;
+    background: url('../../assets/img/bckg-tablet.jpg') no-repeat top;
     min-height: 1024px;
   }
   @include phones {
-    background: url('/assets/img/bckg-iphone.jpg') no-repeat top;
+    background: url('../../assets/img/bckg-iphone.jpg') no-repeat top;
     min-height: 568px;
+  }
+  &::before{
+    content: " ";
+    display: inline-block;
+    height:100%;
+
+  }
+  @include clearfix
+}
+.container-main {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 0;
+  @include desktop {
+    background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
+    min-height: 600px;
+  }
+  @include laptop {
+    background: url('../../assets/img/bckg-1200.jpg') no-repeat top;
+    min-height: 600px;
+  }
+  @include tablet {
+    background: url('../../assets/img/bckg-tablet.jpg') no-repeat top;
+    min-height: 500px;
+  }
+  @include phones {
+    background: url('../../assets/img/bckg-iphone.jpg') no-repeat top;
+    min-height: 558px;
   }
   &::before{
     content: " ";
@@ -82,11 +110,15 @@
     color: #455a64;
     overflow: hidden;
     margin: 0 auto;
-  margin-top: 60px;
-
+    margin-top: 60px;
+  &::before{
+    content: " ";
+    display: inline-block;
+    padding-top: 40px;
+  }
 }
 
-
+/*блок ЛОГИН и обратная визитка*/
 
 .container-name{
 	font-family: 'bernier_regularregular';
@@ -102,8 +134,8 @@
 	padding: 0;
     color: #fff;
     text-align: center;
-
 }
+
 .menu-autorization-item-main{
 	display: inline-block;	
 	height: 45px;
@@ -122,21 +154,9 @@
 	background: rgba(0,150,136,.8);
 }
 
-.phone-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 45px;
-  text-align: center;
-  width: 100%;
-}
-.footer-text{
-  color: #fff;
-  width: 248px;
-  margin: 0 auto;
-}
 
 /*соц сети*/
+
 .socials {
   height: 25px;
   font-size: 0px;
@@ -151,6 +171,7 @@
   height: 25px;
   width: 25px;
   padding-right: 25px;
+  fill: #16c2aa;
 }
 .socials-item:last-child{
   padding-right: 0;
@@ -196,8 +217,6 @@
   background-color: #009688;
 }
 
-
-
 .menu-item-link {
   color: #fff;
   text-decoration: none; }
@@ -236,6 +255,25 @@
   left:0;
   background: springgreen;
   padding-bottom: 10px;
+}
+
+.foto-info{
+  color: #4d5963;
+}
+
+
+.phone-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  text-align: center;
+  width: 100%;
+}
+.footer-text-autorize{
+  color: #fff;
+  width: 248px;
+  margin: 0 auto;
 }
 
 /*

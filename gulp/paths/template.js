@@ -5,6 +5,7 @@ module.exports = [
   './source/template/login.jade',
   './source/template/autorize.jade',
   './source/template/works.jade',
+  './source/template/blog.jade',
   './source/template/about.jade'
     
 ];

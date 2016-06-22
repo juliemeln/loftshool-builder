@@ -1,4 +1,6 @@
-
+.container-av{
+  padding-top: 40px;
+}
 .av-box {
   width: 140px;
   height: 140px;
@@ -6,7 +8,7 @@
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-  padding-top:40px;
+
 }
 
 .avatar {
@@ -23,5 +25,4 @@
 .container-foto-text{
   padding-top: 18px;
   text-align: center;
-  color: #fff;
 }

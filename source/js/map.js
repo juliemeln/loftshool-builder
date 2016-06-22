@@ -1,1 +1,17 @@
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">									embedgooglemaps.com							</a></small></div><div><small><a href="http://buyproxies.io/">buy proxy</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(59.9342802,30.335098600000038),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(59.9342802,30.335098600000038)});infowindow = new google.maps.InfoWindow({content:'<strong>Название</strong><br>санкт-петербург<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+// initMap() - функция инициализации карты
+function initMap() {
+    // Координаты центра на карте. Широта: 56.2928515, Долгота: 43.7866641
+    var centerLatLng = new google.maps.LatLng(56.2928515, 43.7866641);
+
+    // Обязательные опции с которыми будет проинициализированна карта
+    var mapOptions = {
+        center: centerLatLng, // Координаты центра мы берем из переменной centerLatLng
+        zoom: 8               // Зум по умолчанию. Возможные значения от 0 до 21
+    };
+
+    // Создаем карту внутри элемента #map
+    var map = new google.maps.Map(document.getElementById("map-google"), mapOptions);
+}
+
+// Ждем полной загрузки страницы, после этого запускаем initMap()
+google.maps.event.addDomListener(window, "load", initMap);

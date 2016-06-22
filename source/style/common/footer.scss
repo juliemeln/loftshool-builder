@@ -19,7 +19,12 @@
   list-style:none;
   display: inline-block;
 }
-
+.footer-nav-item{
+  padding-right: 40px;
+}
+.footer-socials-item{
+  padding-right: 10px;
+}
 .footer-socials{
   float: right;
 }
@@ -30,15 +35,20 @@
   font-family:'robotolight';
   color: #fff;
   opacity: .5;
+  @include clearfix;
+  padding: 20px 10px;
 }
 .footer-text{
-  width: 50%;
   float: left;
   display: block;
-
+  width:30%;
 }
 .footer-copy{
   float: right;
-  width: 50%;
   display: block;
+  width:30%;
+  text-align: right;
 }
+
+
+
