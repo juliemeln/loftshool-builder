@@ -18,6 +18,13 @@ h1.title-header-blog{
 
 }
 
+.box-blog{
+  @extend .box;
+  svg {
+    fill: #fff;
+  }
+}
+
 aside.nav, .article-list-wrapper{
   display: inline-block;
   width:30%;

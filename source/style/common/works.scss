@@ -1,4 +1,4 @@
-
+/*HEADER*/
 .socials-icon-about-list{
   margin:0;
   padding:0;
@@ -15,7 +15,6 @@
     width: 25px;
   }
 }
-
 .nav-hamburger{
   float: right;
   position: relative;
@@ -23,7 +22,7 @@
   padding-right: 10px;
 }
 
-
+/*    уголки   */
 .box{
   bottom: -5px;
   position: absolute;
@@ -33,32 +32,30 @@
   }
   @include clearfix;
 }
-.box-blog{
-  bottom: -5px;
-  position: absolute;
-  width: 100%;
-  svg{
-    fill:#fff;
+.box-works{
+  @extend .box;
+  svg {
+    fill: #faf8f0;
   }
-  @include clearfix;
 }
 
-/*для заголовка с картинкой блок обертка - ширина и высота*/
-
+/*    Мои работы   */
+.works-title {
+  text-align: center;
+  background-color: #faf8f0;
+}
 
 .title-text{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
 }
-
-
 .arrow-container{
   width: 100%;
   position: absolute;
   bottom: 50px;
-  text-align: center}
-
+  text-align: center
+}
 .works-container{
   background-color: #efeee9;
   @include clearfix;
@@ -68,11 +65,6 @@
     width: 100%;
   }
 }
-.works-title {
-  text-align: center;
-  background-color: #efeee9;
-}
-
 
 .skills-list{
   border-top:1px solid #00bfa5;
@@ -83,7 +75,6 @@
     list-style:none;
     display: inline-block;
     color: #00bfa5;
-
   }
 }
 .btn {
@@ -106,23 +97,27 @@
 
 }
 .portfolio-list{
-  height: 90px;
   font-size: 0;
   background: #1a2c51;
   height:50%;
-}
-
+margin: 0;
+padding: 0}
 .arrow-down{
   display: inline-block;
   width: 50%;
-  height: 90px;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .arrow-up{
   display: inline-block;
   width: 50%;
-  height: 90px;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .quote{
   font-size:16px;
 }
@@ -137,7 +132,6 @@
   height: 78px;
   float: left;
 }
-
 .author{
   float: left;
   display: inline-block;
@@ -153,8 +147,6 @@
 .talk-author:after{
   clear: both;
 }
-
-
 .form-gradient{
   width:300px;
   height:416px;
@@ -162,16 +154,13 @@
   border-radius: 10px;
   @include clearfix;
 }
-
 .form-menu-item {
   list-style: none;
   display: inline-block;
   background: #278f8d;
   height: 45px;
 }
-
-h2.portfolio-title
-{
+h2.portfolio-title{
   text-align: center;
   position: absolute;
   top: 50%;
@@ -179,13 +168,13 @@ h2.portfolio-title
   display: block;
   width:100%;
 }
-
 .site{
   width: 50%;
   display: inline-block;
   float: left;
   height:750px;
   position: relative;
+  background-color: #f0efe9;;
   @include phones {
     display: block;
     width: 100%;
@@ -197,7 +186,6 @@ h2.portfolio-title
     height:270px;
   }
 }
-
 .portfolio-wrapper{
   width: 50%;
   display: inline-block;
@@ -213,13 +201,10 @@ h2.portfolio-title
     width: 100%;
   }
 }
-.portfolio{
+.portfolio {
   text-align: center;
-  padding: 50px 0;
-  height:50%;
-  img{
-    width:100%;
-  }
+  height: 50%;
+
   @include phones {
     display: block;
     width: 100%;
@@ -228,30 +213,43 @@ h2.portfolio-title
     display: block;
     width: 100%;
   }
+  img{
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
 .quote-wrapper{
   background: url("/assets/img/portfolio-bckg.png") no-repeat top;
+  height: 1280px;
+  @include clearfix;
 
 }
 .quote-container{
   width: rem(800px);
   margin: 0 auto;
-  padding: 50px 0;
+  min-height: 100%;
+  margin-bottom: -147px;
   @include clearfix;
+  &:after{
+    content: "";
+    display: block;
+    height: 147px;
+  }
 }
-
-
+.quote-title{
+  text-align: center;
+}
 .blockquote{
       display: inline-block;
       width:rem(380px);
       float: left;
-      @include clearfix
+      @include clearfix;
+  padding-top: 50px;
   @include phones {
     display: block;
     width: 100%;
   }
 }
-
 .quote-text{
   line-height:1.5;
   padding-right: 10px;

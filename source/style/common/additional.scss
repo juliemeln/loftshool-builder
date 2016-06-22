@@ -26,6 +26,37 @@ html {
   }
 }
 
+
+h1.title-header{
+  font-size: rem(63px);
+  font-family: 'bernier_regularregular';
+  position: relative;
+  z-index: 1;
+  margin:0 auto;
+  width: 400px;
+  &:before,&:after{
+    content: "\f068";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #dee0e1;
+    font-size: rem(36px);
+    display: inline-block;
+    padding: 0 15px;
+    opacity:.5;
+  }
+  img{
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    z-index: -1;
+    opacity:.2;
+    top:-50%;
+    transform: translateY(-50%);
+  }
+}
+
 h1.foto-name{
   font-family: 'robotomedium';
   font-size: rem(28px);

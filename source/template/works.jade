@@ -24,14 +24,14 @@ html
         .container-foto-text-about Личный сайт веб разработчика
         .arrow-container
             img(src="/assets/img/arrow_down.svg")
-        .box
+        .box-works
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
             <polygon points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
             <polygon points="1000,0   1000,86   500,86   500,75.5"></polygon>
             </svg>
     .works-title
         h1.title-header Мои работы
-
+            img(src="/assets/img/works_header.svg")
     .works-container
         .site
                 h2.portfolio-title Сайт
@@ -54,9 +54,9 @@ html
 
 
     .quote-wrapper
-        .works-title
-            h1.title-header Что обо мне говорят
         .quote-container
+            .quote-title
+                h1.title-header Что обо мне говорят
             .blockquote
                     .quote-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                     .quote-av
@@ -67,6 +67,6 @@ html
                     .quote-av
                         img(src="/assets/img/zar.jpg")
                     .author Зар Захаров главный преподаватель
+            include common/_form-works
 
-        include common/_form-works
         include common/_footer-works

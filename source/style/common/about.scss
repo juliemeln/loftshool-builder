@@ -49,25 +49,6 @@ h1.foto-name-about,.container-foto-text-about{
   }
 }
 
-h1.title-header{
-  font-size: rem(63px);
-  font-family: 'bernier_regularregular';
-  position: relative;
-  z-index: 1;
-  margin:0;
-  &:before,&:after{
-    content: " - ";
-    display: inline-block;
-  }
-  img{
-    position: absolute;
-    top: -30%;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    opacity:.2;
-  }
-}
 
 
 h2.title{
