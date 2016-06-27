@@ -15,6 +15,8 @@ path: {
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')(),
   rsp: require('remove-svg-properties').stream,
+  concat: require('gulp-concat'),
+  svg: require('gulp-svg-inline-css')
 };
 
 $.path.task.forEach(function(taskPath) {
@@ -32,11 +34,11 @@ $.gulp.task('default', $.gulp.series(
     'copy.image',
     'copy.fonts',
     'css.foundation',
-    'remove-svg-properties'
+    'remove-svg-properties',
+    'gulp-svg-inline-css'
   ),
   $.gulp.parallel(
     'watch',
     'serve'
   )
 ));
-

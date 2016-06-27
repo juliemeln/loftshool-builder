@@ -1,0 +1,19 @@
+form(name="input", action="", method="get")
+  div.form-field
+    .input-field
+      label.login
+      input(type="text", name="user", placeholder="Логин",class="area",required)
+    .input-field
+      label.pswd
+      input(type="text", name="pswd", placeholder="Пароль",class="area",required)
+    .checkbox
+      input(type="checkbox", name="human", id="human")
+      label Я человек
+  div.question Вы точно не робот?
+  ul.robot
+    li.robot-item
+      input(type="radio",name="robot", value="да")
+      label Да
+    li.robot-item
+      input(type="radio",name="robot", value="не уверен")
+      label Не уверен

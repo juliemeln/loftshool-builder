@@ -6,9 +6,8 @@ module.exports = function() {
         .pipe($.rsp.remove({
             stylesheets: true,
             properties: [$.rsp.PROPS_FILL,'fill'],
-          namespaces: ['i', 'sketch', 'inkscape']
-
+            namespaces: ['i', 'sketch', 'inkscape']
         }))
-        .pipe($.gulp.dest($.config.root + '/assets/img/svg'));
+        .pipe($.gulp.dest($.config.root + '/assets/img'));
   });
 };

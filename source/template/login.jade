@@ -7,13 +7,15 @@ html
         <![endif]-->
 
     div.wrapper
-        div.container
-            div.container-form
-                div.container-name - Авторизуйтесь -
-                include common/_form
+        .container
+            .container-white
+                h2.title Авторизуйтесь
+                .container-form
+                    include common/_form-login
                 ul.menu-atorization-list
                     li.menu-autorization-item-main
                         | На главную
                     li.menu-autorization-item-enter
                         | Войти
+
             include ./common/_footer.jade

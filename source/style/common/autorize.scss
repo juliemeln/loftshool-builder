@@ -101,7 +101,7 @@
   }
   @include clearfix
 }
-.container-white{
+.container-white-main, .container-white-enter{
 	width: 300px;
 	height: 395px;
 	background-color: rgba(255,255,255,.8);
@@ -110,16 +110,93 @@
     color: #455a64;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 60px;
-  &::before{
-    content: " ";
-    display: inline-block;
-    padding-top: 40px;
+    margin-top: 86px;
+
+
+  @include desktop{
+    width:380px;
+    height: 400px;
+    margin-top: 248px;
+
   }
+  @include laptop {
+    width:380px;
+    margin-top: 147px;
+
+  }
+  @include tablet{
+    width:348px;
+    margin-top: 314px;
+
+  }
+
 }
+.container-white-enter{
+  display: none;
+}
+.container-form{
 
+}
+.input-field{
+  display: block;
+  height:45px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+.login{
+  float: left;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("../../assets/img/login.svg") no-repeat;
+  background-position: 50% 50%;
+  background-color: #f0efe9;
+  border-bottom-left-radius:5px;
+  border-top-left-radius:5px;
+}
+.area {
+  display: inline-block;
+  height: 45px;
+  border:0;
+  padding:0;
+  margin: 0;
+  padding-left: 20px;
+  border-bottom-right-radius:5px;
+  border-top-right-radius:5px;
+  width:80%;
+}
+.pswd{
+  @extend .login;
+  background: url("../../assets/img/password.svg") no-repeat;
+  background-position: 50% 50%;
+  background-color: #f0efe9;
+}
+.checkbox{
+  width:30%;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-family: 'robotomedium';
+}
+.question{
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: 'robotobold';
+  font-size:rem(16px);
+}
+.robot{
+  list-style:none;
+  width: 234px;
+  margin: 0 auto;
+  padding:0;
+}
+.robot-item{
+  display: inline-block;
+  padding-left: 40px;
+}
 /*блок ЛОГИН и обратная визитка*/
-
+.foto-wrapper{
+  padding-top: 40px;
+}
 .container-name{
 	font-family: 'bernier_regularregular';
 	font-size: 30px;
@@ -134,21 +211,36 @@
 	padding: 0;
     color: #fff;
     text-align: center;
+    bottom:0;
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 0;
+    width: 100%;
+    li{
+      font-size: 16px;
+    }
 }
 
 .menu-autorization-item-main{
+
+    width:189px;
 	display: inline-block;	
 	height: 45px;
-	width: 146px;
+    line-height: 45px;
 	border-right: 1px solid #73c8c0;
 	@include border-bottom-left-radius(10px);
 	background: rgba(0,191,165,.8);
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
 
 }
 .menu-autorization-item-enter{
-	display: inline-block;	
+	display: inline-block;
+    line-height:45px;
 	height: 45px;
-	width: 146px;
+	width: 189px;
 	border-left: 1px solid #73c8c0;
 	@include border-bottom-right-radius(10px);
 	background: rgba(0,150,136,.8);
@@ -171,7 +263,6 @@
   height: 25px;
   width: 25px;
   padding-right: 25px;
-  fill: #16c2aa;
 }
 .socials-item:last-child{
   padding-right: 0;
@@ -192,13 +283,15 @@
   padding:0;
   list-style: none;
   width: 100%;
-  @include clearfix;
-
+  position: absolute;
+  bottom:0;
+  display: block;
+  font-size:0;
 }
 .menu-item {
   height: 45px;
   display: inline-block;
-  border-right: 1px solid #73c8c0;
+  border-right: 2px solid #73c8c0;
   font-size: 16px;
   font-family: 'robotomedium';
   background: rgba(0, 150, 136, 0.85);
@@ -206,7 +299,6 @@
   width: calc(100% / 3);
   box-sizing: border-box;
   line-height: 45px;
-
 }
 
 .menu-item:last-child {

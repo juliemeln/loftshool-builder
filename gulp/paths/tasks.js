@@ -12,5 +12,6 @@ module.exports = [
   './gulp/tasks/js.lint.js',
   './gulp/tasks/copy.fonts.js',
   './gulp/tasks/remove-svg-properties.js',
+  './gulp/tasks/gulp-svg-inline-css.js',
   './gulp/tasks/copy.image.js'
 ];

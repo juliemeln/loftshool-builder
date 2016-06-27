@@ -50,7 +50,7 @@ function initMap() {
 // Ждем полной загрузки страницы, после этого запускаем initMap()
 google.maps.event.addDomListener(window, "load", initMap);*/
 
-function initialize() {
+/*function initialize() {
   var mapProp = {
     center:new google.maps.LatLng(59.9289317,30.2943374),
     zoom:10,
@@ -62,4 +62,119 @@ function initialize() {
 
   var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize); */
+/*
+(function() {
+  var counter=1;
+  $('.slider-controls-top').on('click',function(e){
+    e.preventDefault();
+    var $this=$(this),
+      container = $this.closest('.slider'),
+      items = container.find('.slider-item'),
+      activeItem = container.find('.slider-item.active');
+    if(counter>= items.length) {
+      counter=0;
+    }
+    var reqItem = items.eq(counter);
+    activeItem.animate({
+      'top':'100%'
+    },300);
+    reqItem.animate({
+      'top':'0%'
+    },300, function(){
+      activeItem.removeClass('active').css('top','-100%'),
+      $(this).addClass('active');
+  });
+  counter ++;
+
+});
+
+}());
+
+
+(function() {
+  $('.slideshow-link').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this),
+        path = $this.attr('href'),
+        container = $this.closest('.slideshow'),
+        display = container.find('.slideshow-display-pic'),
+        preloader = $('#preloader');
+    display.fadeOut(300, function () {
+      preloader.show();
+      display.attr('src', path).load(function () {
+        $(this).fadeIn();
+        preloader.hide();
+      });
+    });
+  });
+}()); */
+
+(function() {
+  var counter=1;
+  $('.slideshow-link').on('click', function(e) {
+    e.preventDefault();
+    var $this=$(this),
+        container = $this.closest('.slider'),
+        items = container.find('.slider-item'),
+        activeItem = container.find('.slider-item.active');
+    if(counter>= items.length) {
+      counter=0;
+    }
+    var reqItem = items.eq(counter);
+    activeItem.animate({
+      'top':'100%'
+    },300);
+    reqItem.animate({
+      'top':'0%'
+    },300, function(){
+      activeItem.removeClass('active').css('top','-100%'),
+          $(this).addClass('active');
+    });
+    counter ++;
+  });
+}());
+
+(function() {
+  $('.slideshow-link').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this),
+        path = $this.attr('href'),
+        container = $this.closest('.slideshow'),
+        display = container.find('.slideshow-display-pic'),
+        preloader = $('#preloader');
+    display.fadeOut(300, function () {
+      preloader.show();
+      display.attr('src', path).load(function () {
+        $(this).fadeIn();
+        preloader.hide();
+      });
+    });
+  });
+}());
+
+/* смена формы логин-авторизацияя */
+(function() {
+  $('.btn-container').on('click', function(e) {
+    e.preventDefault();
+    var $this=$(this),
+        container = $this.next('.container-white-main');
+
+    $(this).hide();
+    container.hide();
+    container.next().show();
+  });
+
+}());
+
+/* зеленое меню поверх */
+(function() {
+  $('.nav-hamburger').on('click', function(e) {
+    e.preventDefault();
+    var $this=$(this),
+        container = $this.parent().prev();
+    container.show();
+
+  });
+
+}());
