@@ -7,7 +7,13 @@ $footer-height:45px;
   @return $px/16px +0rem;
 }
 
-
+#page-preloader{
+  height:100vh;
+  background:url(../img/mount_preloader.gif) top center no-repeat;
+  background-size:cover;
+  top:0;
+  left:0;
+}
 html {
   position: relative;
   min-height: 100%;
@@ -33,6 +39,8 @@ h1.title-header{
   font-family: 'bernier_regularregular';
   position: relative;
   z-index: 1;
+  margin: 0;
+  color: #373e42;
  /* margin:0 auto;
   width: 400px; */
   &:before,&:after{
@@ -81,3 +89,65 @@ h1.foto-name{
   @include clearfix
 }
 
+
+.container-bg{
+  top:0;
+  left:0;
+  right: 0;
+  position: absolute;
+  height:1267px;
+  img{
+    display: block;
+    max-width:100%;
+  }
+}
+
+/// ****** HAMBURGER
+
+.nav-hamburger {
+  display: block;
+  text-align: center;
+  svg {
+    cursor: pointer;
+  }
+}
+.upper,.middle,.down {
+  transition: all 0.3s linear;
+  transform: rotate(0deg);
+  transform-origin: 0% 50%;
+}
+#burgericon.open .upper {
+  transform: rotate(50deg);
+}
+#burgericon.open .down {
+  transform: rotate(-50deg);
+}
+#burgericon.open .middle {
+  width: 0;
+  opacity: 0;
+}
+
+
+/*
+.parallax{
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+section{
+  display: flex;
+  height: 100vh;
+  background-position: 50% 0;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.first{
+  background-image: url('/assets/img/parallax/fon.jpg');
+}
+.second{
+  background-image: url('/assets/img/parallax/1.png');
+
+}*/

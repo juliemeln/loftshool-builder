@@ -7,7 +7,7 @@
   position: absolute;
   top:0;
   left:0;
-  z-index: 10;
+  z-index: 1;
   color: #fff;
   display: none;
 }
@@ -20,6 +20,11 @@
 }
 .fullscreen-menu-item{
   text-align: center;
+  padding:20px 0;
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
 
 }
 
@@ -42,11 +47,16 @@
   }
 }
 .nav-hamburger{
+  cursor: pointer;
   float: right;
   position: relative;
   padding-top: 10px;
   padding-right: 10px;
   z-index: 100;
+  svg#Layer_1{
+    fill:#454;
+  }
+
 }
 
 /*    уголки   */
@@ -71,58 +81,63 @@
 .works-title {
   text-align: center;
   background-color: #faf8f0;
+  padding: 40px 0;
 }
-h2.portfolio-title{
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
-  width:100%;
-}
-.site{
+
+.site,.slider{
   width: 50%;
   display: inline-block;
   float: left;
   height:750px;
   position: relative;
-  background-color: #f0efe9;;
+  background-color: #f0efe9;
+  text-align: center;
   @include phones {
     display: block;
     width: 100%;
-    height:220px;
   }
   @include tablet{
     display: block;
     width: 100%;
-    height:270px;
   }
 }
-.skills-list{
-  border-top:1px solid #00bfa5;
-  border-bottom:1px solid #00bfa5;
-  padding: 10px 0;
-  text-align: center;
-  li{
-    list-style:none;
-    display: inline-block;
-    color: #00bfa5;
-  }
+.site-desc{
+  position: absolute;
+  transform:translateY(-50%);
+  top:50%;
+  width:100%;
+}
+.site-desc-item{
+  list-style:none;
 }
 
+.site-tech{
+  border-top:1px solid #00bfa5;
+  border-bottom:1px solid #00bfa5;
+  color: #00bfa5;
+  width:300px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
 
 
 .arrow-container{
   width: 100%;
   position: absolute;
   bottom: 50px;
-  text-align: center
+  text-align: center;
+  z-index: 10;
 }
 
 .works-container{
   background-color: #efeee9;
   @include clearfix;
 
+  @include tablet {
+    display: block;
+    width: 100%;
+
+  }
   @include phones {
     display: block;
     width: 100%;
@@ -135,7 +150,6 @@ h2.portfolio-title{
   border-radius: 10px;
   width: 200px;
   height: 40px;
-  padding: 10px;
   color: #fff;
   display: block;
   margin: 0 auto;
@@ -144,6 +158,7 @@ h2.portfolio-title{
   line-height:40px;
   text-align: center;
   font-size: rem(16px);
+  margin-top: 40px;
   img{
     padding-left: 10px;
   }
@@ -159,9 +174,7 @@ padding: 0}
   display: inline-block;
   width: 50%;
   height: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+
 }
 .arrow-up{
   display: inline-block;
@@ -190,6 +203,8 @@ padding: 0}
   display: inline-block;
   width:50%;
   padding: 20px;
+  color: #20b5a1;
+  font-family: 'robotobold';
 
 }
 .talk-author{
@@ -200,20 +215,49 @@ padding: 0}
 .talk-author:after{
   clear: both;
 }
+
 .form-gradient{
-  width:300px;
-  height:416px;
-  margin: 0 auto;
-  border-radius: 10px;
-  @include clearfix;
+  position: absolute;
+  top:0;
+  height:100%;
+  width:100%;
+}
+.form-contact-works{
+  padding-left:20px ;
+}
+.form-menu{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 0;
+  margin:0;
+padding: 0;
 }
 .form-menu-item {
   list-style: none;
   display: inline-block;
-  background: #278f8d;
-  height: 45px;
+  width:50%;
+
 }
 
+.btn-works{
+  background: #00bfa5;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 45px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.form-container {
+  width:100%;
+  height:100%;
+  position: relative;
+  
+}
 /*  СЛАЙДЕР  */
 
 .portfolio-wrapper{
@@ -231,12 +275,19 @@ padding: 0}
   }
 }
 
-.slider-display{
-  width: 400px;
+.slider-up,.slider-down{
+  width: 45%;
   height:200px;
   position: relative;
   overflow: hidden;
+  display: inline-block;
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
 }
+
 .slider-list{
   position: absolute;
   top: 0;
@@ -262,7 +313,6 @@ padding: 0}
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .portfolio {
@@ -286,11 +336,6 @@ padding: 0}
   background: url("/assets/img/portfolio-bckg.png") no-repeat top;
   height: 1280px;
   @include clearfix;
-
-}
-.quote-container{
-  width: rem(800px);
-  margin: 0 auto;
   min-height: 100%;
   margin-bottom: -147px;
   @include clearfix;
@@ -299,19 +344,40 @@ padding: 0}
     display: block;
     height: 147px;
   }
+
+}
+.quote-container{
+  top:0;
+  position: absolute;
+  padding-top: 50px;
+  text-align: center;
+  width:100%;
+  @include clearfix;
+  @include tablet{
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  @include phones {
+    display: block;
+    width:100%;
+    position: relative;
+  }
 }
 .quote-title{
   text-align: center;
+  padding-top: 20px;
 }
 .blockquote{
       display: inline-block;
       width:rem(380px);
-      float: left;
       @include clearfix;
-  padding-top: 50px;
+      padding-top: 50px;
+  text-align: left;
+
   @include phones {
     display: block;
-    width: 100%;
+    width:100%;
   }
 }
 .quote-text{
@@ -332,35 +398,74 @@ padding: 0}
     width:100%;
   }
 }
-/*
- .blur
-    img(src="/assets/img/portfolio-bckg.png")
+
+
+/////// BLUR FORM
 
 
 .blur {
-   height: 600px;
-   width: 50%;
-   margin: -90px auto;
-   z-index: -1;
+   height: 100vh;
    position: relative;
-   filter: blur(10px);
-   filter: url(#blur);
-   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
-   overflow: hidden;
- }
-
-.blur:after {
-  content: '';
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, .2);
-  position: absolute;
+  overflow: hidden;
+  min-height:1200px;
+  @include clearfix;
+  @include tablet{
+  background-image: url('/assets/img/portfolio-bckg.png');
+  }
 }
 
-*/
+.blur-img{
+  display: block;
+  max-width:100%;
+  width:100%;
+}
 
-/*.title-text{
+.blur-background{
   position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-}*/
+  top:0;
+  left:0;
+  right:0;
+  @include desktop{
+    min-width: 900px;
+  }
+  @include tablet{
+    img{
+      display: none;
+    }
+  }
+
+}
+
+.blur-form-wrapper{
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  @include clearfix;
+  @include desktop {
+    transform:translate(-50%,-50%);
+    top: 50%;
+    left:50%;
+  }
+  @include tablet{
+    position: relative;
+    margin: 0 auto;
+  }
+  @include phones {
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.blur-form{
+  width:100%;
+  height:100%;
+  fiter:blur(20px);
+  -webkit-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter:blur(20px);
+  background-image: url("/assets/img/portfolio-bckg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}

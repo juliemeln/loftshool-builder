@@ -5,27 +5,28 @@
 
 .btn-container{
   text-align: center;
-  position: relative;
+  position: absolute;
   z-index: 1;
-  float: right;
+  top: 20px;
+  right:20px;
   @include desktop {
-    margin-right:100px;
-    margin-top:25px;
-
+    top: 25px;
+    right:100px;
   }
   @include laptop {
-    margin-right:100px;
-    margin-top:25px;
+    top: 25px;
+    right:100px;
+
 
   }
   @include tablet {
-    margin-right:20px;
-    margin-top:25px;
+    top: 25px;
+    right:20px;
+
   }
   @include phones {
-    float: none;
-    margin: 0 auto;
-    margin-top: 20px;
+    top: 25px;
+
   }
   @include clearfix;
 }
@@ -37,46 +38,47 @@
   @include border-radius(5px);
   color: #fff;
   font-size: 16px;
-}
-
-.autorize-button:hover {
-  color: #009688;
+  &:hover {
+    color: #00bfa5;
+    cursor: pointer;
+    background: #fff;
+  }
 }
 
 /*ФОНОВАЯ КАРТИНКА*/
 
 .container {
-  margin: 0 auto;
-  position: relative;
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   @include desktop {
     background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
-    min-height: 900px;
+    background-size: cover;
   }
   @include laptop {
     background: url('../../assets/img/bckg-1200.jpg') no-repeat top;
     min-height: 789px;
+    background-size: cover;
+    height: 100vh;
+
   }
   @include tablet {
     background: url('../../assets/img/bckg-tablet.jpg') no-repeat top;
     min-height: 1024px;
+    background-size: cover;
   }
   @include phones {
     background: url('../../assets/img/bckg-iphone.jpg') no-repeat top;
     min-height: 568px;
+    background-size: cover;
   }
-  &::before{
-    content: " ";
-    display: inline-block;
-    height:100%;
 
-  }
   @include clearfix
 }
+
 .container-main {
-  margin: 0 auto;
-  position: relative;
-  margin-top: 0;
+
   @include desktop {
     background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
     min-height: 600px;
@@ -97,46 +99,129 @@
     content: " ";
     display: inline-block;
     height:100%;
-
   }
   @include clearfix
 }
-.container-white-main, .container-white-enter{
-	width: 300px;
-	height: 395px;
-	background-color: rgba(255,255,255,.8);
-	@include border-radius(10px);
-    position: relative;
-    color: #455a64;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 86px;
-
-
-  @include desktop{
-    width:380px;
-    height: 400px;
-    margin-top: 248px;
-
+.hero{
+  height:100vh;
+  min-height:650px;
+  position: relative;
+  overflow: hidden;
+  @include desktop {
+    background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
+    min-height: 600px;
   }
   @include laptop {
-    width:380px;
-    margin-top: 147px;
-
+    background: url('../../assets/img/bckg-1200.jpg') no-repeat top;
+    min-height: 600px;
   }
-  @include tablet{
-    width:348px;
-    margin-top: 314px;
-
+  @include tablet {
+    background: url('../../assets/img/bckg-tablet.jpg') no-repeat top;
+    min-height: 500px;
   }
+  @include phones {
+    background: url('../../assets/img/bckg-iphone.jpg') no-repeat top;
+    min-height: 558px;
+  }
+  &::before{
+    content: " ";
+    display: inline-block;
+    height:100%;
+  }
+  @include clearfix
+}
+.hero-bg{
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  height: 900px;
 
+
+  img{
+    display: block;
+    max-width: 100%;
+    width:100%;
+    height:100%;
+    max-height:100%;
+    @include laptop {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include phones {
+      display: none;
+    }
+  }
+}
+.hero-section,.hero-user{
+  position: absolute;
+  top:30%;
+  left:0;
+  right:0;
+  transform:translateY(-50%);
+  text-align: center;
+  img{
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+.hero-section{
+  opacity:.1;
+
+}
+
+.container-white{
+  width: 380px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.container-white-main, .container-white-enter {
+  background-color: rgba(255, 255, 255, .8);
+  @include border-radius(10px);
+  color: #455a64;
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  left: 0;
+
+  perspective: 600px;
+  @include desktop {
+    width: 380px;
+    height: 400px;
+  }
+  @include laptop {
+    width: 380px;
+  }
+  @include tablet {
+    width: 348px;
+  }
 }
 .container-white-enter{
-  display: none;
-}
-.container-form{
+  transform: rotateY( 180deg );
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  &.flip{
+    transform: rotateY(0deg );
 
+  }
 }
+.container-white-main{
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  &.flip{
+    transform: rotateY( 180deg );
+    backface-visibility: hidden;
+  }
+}
+
 .input-field{
   display: block;
   height:45px;
@@ -155,15 +240,33 @@
   border-top-left-radius:5px;
 }
 .area {
-  display: inline-block;
   height: 45px;
   border:0;
-  padding:0;
   margin: 0;
-  padding-left: 20px;
-  border-bottom-right-radius:5px;
-  border-top-right-radius:5px;
+  display: block;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  opacity: .85;
+  color: #5f5a55;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+}
+.login-form {
+  height: 45px;
+  display: inline-block;
+  padding: 0;
   width:80%;
+  opacity: .85;
+  color: #5f5a55;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  padding-left: 5px;
 }
 .pswd{
   @extend .login;
@@ -222,7 +325,7 @@
 }
 
 .menu-autorization-item-main{
-
+  float: left;
     width:189px;
 	display: inline-block;	
 	height: 45px;
@@ -237,6 +340,7 @@
 
 }
 .menu-autorization-item-enter{
+  float: right;
 	display: inline-block;
     line-height:45px;
 	height: 45px;
@@ -244,6 +348,10 @@
 	border-left: 1px solid #73c8c0;
 	@include border-bottom-right-radius(10px);
 	background: rgba(0,150,136,.8);
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 
@@ -260,16 +368,21 @@
 .socials-item {
   list-style: none;
   display: inline-block;
-  height: 25px;
-  width: 25px;
   padding-right: 25px;
+  float: left;
+  opacity:.8;
+  &:hover{
+    opacity: 1;
+  }
+  img{
+      height: 25px;
+      width: 25px;
+    }
 }
+
 .socials-item:last-child{
   padding-right: 0;
 }
-
-.socials .socials-item:first-child {
-  margin-left: 0; }
 
 
 /*МЕНЮ*/
@@ -316,6 +429,7 @@
 
 
 /*форма*/
+
 
 .field-img{
   position: relative;
@@ -368,10 +482,21 @@
   margin: 0 auto;
 }
 
-/*
-footer{
-  height: $footer-height;
-  margin-top: -$footer-height;
-} */
+input[type="checkbox"] {
+  display:none;
+}
+input[type="checkbox"] + label {
+  display:inline-block;
+  width:20px;
+  height:20px;
+  vertical-align:middle;
+  cursor:pointer;
+  text-indent: 40px;
+  background: #00bfa5;
+}
+input[type="checkbox:checked"] {
+
+  background: url(/assets/img/check.png) left top no-repeat;
+}
 
 @import 'common/media'

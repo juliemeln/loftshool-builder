@@ -1,13 +1,11 @@
-div.form-gradient
+.form-gradient
   h2.form-title Связаться со мной
-  form(name="works", action="", method="POST")
+  form(name="works", action="", method="POST").form-contact-works
     input(type="text", name="name", placeholder="Имя",class="area",required)
     input(type="email", name="email", placeholder="Email",class="area",required)
     textarea(name="message", placeholder="Ваше сообщение",rows="5",class="area",required)
-    ul.form-menu
-      li.form-menu-item
-        input(type="submit", value="Отправить")
-      li.form-menu-item
-        input(type="submit", value="Очистить")
-    img(src="/assets/img/portf_arrow_up.svg")
-
+  ul.form-menu
+    li.form-menu-item
+      button(type="submit", value="Отправить").btn-works
+    li.form-menu-item
+      button(type="submit", value="Очистить").btn-works

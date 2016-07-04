@@ -1,0 +1,29 @@
+.blur
+    .blur-background
+        img(src="/assets/img/portfolio-bckg.png").blur-img
+        .quote-container
+            .blockquote
+                .quote-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .quote-av
+                    img(src="/assets/img/kovalchuk.jpg")
+                .author Ковальчук Дмитрий основатель Loftschool
+            .blockquote
+                .quote-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .quote-av
+                    img(src="/assets/img/zar.jpg")
+                .author Зар Захаров главный преподаватель
+        .blur-form-wrapper
+            .blur-form
+            .form-gradient
+                h2.title Связаться со мной
+                form(name="works", action="", method="POST").form-contact-works
+                    input(type="text", name="name", placeholder="Имя",class="area",required="required")
+                    input(type="email", name="email", placeholder="Email",class="area",required="required")
+                    textarea(name="message", placeholder="Ваше сообщение",rows="5",class="area",required="required")
+                .form-menu
+                    .form-menu-item
+                        input(type="submit" value="Отправить").btn-works
+                    .form-menu-item
+                        input(type="reset" value="Очистить").btn-works
+        .arrow-container
+            img(src="/assets/img/portf_arrow_up.svg")

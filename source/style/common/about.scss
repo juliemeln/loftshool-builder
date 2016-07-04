@@ -1,7 +1,6 @@
 h1.foto-name-about,.container-foto-text-about{
   color: #fff;
   text-align: center;
-
 }
 
 .about-title {
@@ -10,18 +9,14 @@ h1.foto-name-about,.container-foto-text-about{
   text-align: center;
 
   @include laptop {
-
     margin: 0 auto;
     display: block;
-
   }
   @include tablet {
-
     margin: 0 auto;
     display: block;
   }
   @include phones {
-
     margin: 0 auto;
     display: block;
   }
@@ -52,7 +47,6 @@ h1.foto-name-about,.container-foto-text-about{
 
 
 h2.title{
-  padding-top: 10px;
   font-family: 'bernier_regularregular';
   font-size:rem(35px);
   text-align: center;
@@ -87,6 +81,7 @@ h2.title{
 .about-container{
   width:50%;
   float: left;
+  padding-top: 40px;
   @include tablet {
     width:100%;
   }
@@ -116,6 +111,8 @@ h2.title{
 }
 .skills-item{
   list-style:none;
+  font-family: 'robotomedium';
+  font-size: rem(28px);
   ul{
     list-style:none;
     li {
@@ -126,37 +123,26 @@ h2.title{
 
 .map{
   position: relative;
-  z-index: -1;
-  &:after{
-    content: "";
-    display: block;
-  }
+  height: 100vh;
+  width:100%;
+
 }
 .contact-wrapper{
-  width:100%;
   position: absolute;
   top:0;
   transform: translateY(50%);
+  width:100%;
 }
 
 .contact-container{
   width:380px;
   height: 290px;
   background-color: rgba(#fff,.8);
-  margin: 0 auto;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
-/*   ПРОГРЕСС БАР   */
-#svg circle {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s linear;
-  stroke: #666;
-  stroke-width: 1em;
-}
-#svg #bar {
-  stroke: #10c1a8;
-}
+
 .cont {
   height: 100px;
   width: 100px;
@@ -185,4 +171,79 @@ input {
   width: 1800px;
   height: 1000px;
   margin: 0 auto;
+  z-index: -1;
+  margin-bottom:-150px;
+}
+/*   ПРОГРЕСС БАР   */
+
+.circle{
+  position: relative;
+  width: 140px;
+  height:140px;
+  display: inline-block;
+}
+
+.skill{
+  fill: none;
+  stroke-width: 20;
+  transform: rotate(90deg);
+}
+.progress {
+  -webkit-transition: all 10s;
+  transition: all 10s;
+}
+.html{
+  stroke: #10c1a8;
+  stroke-dasharray: 150 370;
+}
+.css{
+  stroke: #10c1a8;
+  stroke-dasharray: 150 370;
+}
+.java{
+  stroke: #10c1a8;
+  stroke-dasharray: 100 370;
+}
+.php{
+  stroke: #10c1a8;
+  stroke-dasharray: 50 370;
+}
+.mysql{
+  stroke: #10c1a8;
+  stroke-dasharray: 50 370;
+}
+.node{
+  stroke: #10c1a8;
+  stroke-dasharray: 20 370;
+}
+.mongo{
+  stroke: #10c1a8;
+  stroke-dasharray: 1 370;
+}
+.git{
+  stroke: #10c1a8;
+  stroke-dasharray: 40 370;
+}
+.gulp{
+  stroke: #10c1a8;
+  stroke-dasharray: 40 370;
+}
+.bower{
+  stroke: #10c1a8;
+  stroke-dasharray: 40 370;
+}
+
+.circle-text{
+  font-family: 'RobotoRegular';
+  font-size: .8rem;
+  color: #10c1a8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 65px;
+  text-align: center;
+  border-radius: 50%;
 }

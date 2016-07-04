@@ -1,19 +1,23 @@
 .footer-main{
   background: rgba(#373e42,.85);
-  height:147px;
-  margin-top:-147px;
+
   @include clearfix
 }
 
 .line1{
-  height:73px;
   width:100%;
   border-bottom: 1px solid #fff;
+  @include clearfix
 
 }
 .footer-nav{
   float: left;
   color: #fff;
+  @include phones{
+    display: block;
+    width:100%;
+    float: none;
+  }
 }
 .footer-nav-item, .footer-socials-item{
   list-style:none;
@@ -21,32 +25,48 @@
 }
 .footer-nav-item{
   padding-right: 40px;
+  @include phones{
+    padding-right: 8px;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    font-family:'robotolight';
+    font-size: rem(16px);
+  }
+
 }
 .footer-socials-item{
-  padding-right: 10px;
+  padding-right: 20px;
 }
 .footer-socials{
   float: right;
+
+  @include phones{
+    display: block;
+    width:100%;
+    float: none;
+  }
 }
 
 .line2{
-  height:73px;
   border-bottom: 1px solid #fff;
   font-family:'robotolight';
+  font-size: rem(16px);
   color: #fff;
   opacity: .5;
   @include clearfix;
-  padding: 20px 10px;
+  padding: 15px 10px;
 }
 .footer-text{
   float: left;
   display: block;
-  width:30%;
+  width:40%;
 }
 .footer-copy{
   float: right;
   display: block;
-  width:30%;
+  width:40%;
   text-align: right;
 }
 

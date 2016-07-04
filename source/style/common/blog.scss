@@ -36,19 +36,7 @@ aside.nav, .article-list-wrapper{
   float: right;
 
 
-.articles{
-  padding-right: 100px;
-  &:after {
-    content: "";
-    display: block;
-    width: 60%;
-    height: 5px;
-    background: #f1f1f2;
-    margin: 20px 0;
-    padding-right:10% ;
-  }
 
-}
 .arlicle-list{
   width:80%;
   margin: 0;
@@ -70,7 +58,9 @@ aside.nav, .article-list-wrapper{
   font-family:'bernier_regularregular';
   font-size: rem(35px);
   padding: 10px 0;
+  color: #455a64;
 }
+
 .article-date{
   color:#00bfa5;
   font-size:rem(14px);
@@ -82,6 +72,7 @@ aside.nav, .article-list-wrapper{
   margin-left: 10px;
 
 }
+/*
 .article-item{
   list-style:none;
   padding:20px 0;
@@ -99,6 +90,92 @@ a{
 }
   a:hover {
     color: #00bfa5;
+    
     }
 
+}
+*/
+.container-blog{
+  width: 90%;
+  margin: 0 auto;
+  height: 1500px;
+}
+
+.left-col{
+  float: left;
+  width:30%;
+  height:1px;
+}
+.right-col{
+  float: left;
+  width:70%;
+  img {
+    display: block;
+    max-width: 100%; }
+  .articles{
+    padding-right: 100px;
+    &:after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 5px;
+      background: #f1f1f2;
+      margin: 20px 0;
+      padding-right:10% ;
+    }
+  }
+  .articles:last-child{
+    &:after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 0;
+      background: #f1f1f2;
+      margin: 20px 0;
+      padding-right:10% ;
+    }
+
+  }
+}
+.menu-blog{
+  margin-right: 50px;
+
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  list-style: none;
+}
+.menu-wrapper{
+  position: relative;
+  height:1px;
+}
+.menu-blog-link{
+  padding: 10px;
+  display: block;
+  text-align: right;
+  text-decoration: none;
+
+  &:hover{
+    cursor: pointer;
+    color: #00bfa5;
+
+  }
+
+}
+.menu-blog-item{
+  margin-bottom: 20px;
+  &:hover{
+    border-right: 2px solid #1abc9c;
+
+  }
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.container-articles{
+  @include clearfix;
 }

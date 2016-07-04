@@ -1,98 +1,32 @@
-doctype html
-html
-    include common/_head
-    body
-        <!--[if lt IE 7]>
-        <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-        <![endif]-->
-.wrapper
-    .fullscreen-menu
-        ul.fullscreen-menu-list
-            li.fullscreen-menu-item
-                h1.title-header Мои работы
-            li.fullscreen-menu-item
-                h1.title-header Блог
-            li.fullscreen-menu-item
-                h1.title-header Обо мне
-            li.fullscreen-menu-item
-                h1.title-header Авторизация
+extends common/_head
+block title
+    title Мои работы
 
-    header.header
+block wrapper
+    .wrapper
+        include common/_fullscreenmenu
 
-        ul.socials-icon-about-list
-            li.socials-item
-                img(src="./assets/img/vk.svg").social-link
-            li.socials-item
-                img(src="./assets/img/in.svg").social-link
-            li.socials-item
-                img(src="./assets/img/github.svg").social-link
-        .nav-hamburger
-            g#hamburger
-    .container-main
-        .container-av
-            div.av-box
-                img(src="/assets/img/foto.jpg").avatar
-            h1.foto-name-about Юлия Мельник
-        .container-foto-text-about Личный сайт веб разработчика
-        .arrow-container
-            img(src="/assets/img/arrow_down.svg")
-        .box-works
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
-            <polygon points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-            <polygon points="1000,0   1000,86   500,86   500,75.5"></polygon>
-            </svg>
-    .works-title
-        h1.title-header Мои работы
-            img(src="/assets/img/works_header.svg")
-    .works-container
-        .site
-                h2.portfolio-title Сайт
-                    ul.skills-list
-                        li.skill HTML,
-                        li.skill CSS,
-                        li.skill JAVASCRIPT
-                    a(href="#").btn Посмотреть сайт
+        include common/_header
+        #next
+        .works-title
+            h1.title-header Мои работы
+                img(src="/assets/img/works_header.svg")
+        .works-container
+            .site
+                ul.site-desc
+                    li.site-desc-item
+                      h2.title Сайт
+                    li.site-desc-item
+                      .site-tech
+                         | HTML,CSS, JAVASCRIPT
+                    li.site-desc-item
+                      a(href="#").btn Посмотреть сайт
                         img(src="/assets/img/link.svg")
+            include common/slider-slideshow
+        .quote-title
+            h1.title-header Что обо мне говорят
+                img(src="/assets/img/about_header.svg")
+        include common/_blur
 
-
-        .slideshow
-            .slideshow-display
-                img(src="/assets/img/portfolio.png").slideshow-display-pic
-
-            .slider
-                .slider-display
-                    ul.slideshow-list
-                        li.slideshow-item
-                            a(href="/assets/img/bckg-iphone.jpg").slideshow-link
-                                img(src="/assets/img/bckg-iphone.jpg")
-                        li.slideshow-item
-                            a(href="/assets/img/bckg-iphone.jpg").slideshow-link
-                                img(src="/assets/img/bckg-iphone.jpg")
-                        li.slideshow-item
-                            a(href="/assets/img/bckg-iphone.jpg").slideshow-link
-                                img(src="/assets/img/portfolio.png")
-
-
-                .slider-controls
-                    a(href="#").slider-controls-top
-                         img(src="/assets/img/portf_arrow_down.svg")
-            .arrow-up
-                img(src="/assets/img/portf_arrow_up.svg")
-
-    .quote-wrapper
-        .quote-container
-            .quote-title
-                h1.title-header Что обо мне говорят
-            .blockquote
-                    .quote-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .quote-av
-                        img(src="/assets/img/kovalchuk.jpg")
-                    .author Ковальчук Дмитрий основатель Loftschool
-            .blockquote
-                    .quote-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                    .quote-av
-                        img(src="/assets/img/zar.jpg")
-                    .author Зар Захаров главный преподаватель
-            include common/_form-works
 
         include common/_footer-works
