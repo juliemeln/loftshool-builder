@@ -4,16 +4,14 @@
   height:100vh;
   background:#ebefe2;
   min-height:650px;
-  @include tablet{
-    height:auto;
-    min-height:0;
-  }
+
 }
 .about-me__left.inform {
   background:#ebefe2;
   text-align:center;
   position:relative;
   height:100%;
+  width:50%;
 
   &:before{
     content:'';
@@ -34,7 +32,7 @@
 .about-me__left_center{
   display:inline-block;
   vertical-align:middle;
-  max-width:90%;
+  width:100%;
 }
 .works__skills-info{
   color:#6c9c5a;
@@ -51,9 +49,7 @@
   display:inline-block;
   line-height:45px;
   overflow:hidden;
-  @include tablet{
-    margin-bottom:30px;
-  }
+
 }
 .works__url{
   display:block;
@@ -77,10 +73,9 @@
 .about-me__right.slider__right{
   background:#e2e4d7;
   position:relative;
-  @include tablet{
-    width:100%;
-    float:none;
-  }
+  width:50%;
+
+
 }
 .slider__controls{
   position:absolute;
@@ -89,10 +84,7 @@
   right:0;
   height:30%;
   display:block;
-  @include tablet{
-    position:static;
-    height:100px;
-  }
+
 }
 .slider__controls-item{
   display:block;
@@ -159,10 +151,7 @@
   width:100%;
   height:70%;
   overflow:hidden;
-  @include tablet{
-    position:static;
-    height:auto;
-  }
+
 
   & img{
     max-width:90%;
@@ -174,8 +163,5 @@
     left: 0;
     right: 0;
 
-    @include tablet{
-      position:static;
-    }
   }
 }

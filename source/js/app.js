@@ -1,6 +1,4 @@
-
 //ФОН
-
 $(window).scroll(function () {
   var wScroll = $(window).scrollTop();
   (function () {
@@ -22,28 +20,6 @@ $(window).scroll(function () {
     }
   }());
 });
-
-
-
-/*$(document).ready(function(){
-  setBlur();
-});
-
-$(window).resize(function(){
-  setBlur();
-});
-
-function setBlur() {
-  var imgWidth=$('.blur-background').width(),
-      blur=$('.blur-form'),
-      blurSection=$('.blur'),
-      posTop=blurSection.offset().top-blur.offset().top,
-      posLeft=blurSection.offset().left-blur.offset().left;
-  blur.css({
-    'background-size':imgWidth + 'px' + ' ' + 'auto',
-    'background-position': posLeft + 'px' + ' ' + posTop + 'px'
-  });*/
-
 
 
 //Прелоад
@@ -70,12 +46,62 @@ function setBlur() {
 
 
   });
-}()); 
+}());
+
+
+// анимация прогресс-кругов
+
+$(window).scroll(function () {
+  var wscroll = $(window).scrollTop();
+  (function () {
+    var svgHtml = $('.html'),
+        svgCss = $('.css'),
+        svgjava = $('.java'),
+        svgPhp = $('.php'),
+        svgMysql = $('.mysql'),
+        svgNode = $('.node'),
+        svgMongo = $('.mongo'),
+        svgGit = $('.git'),
+        svgGulp = $('.gulp'),
+        svgBower = $('.bower'),
+        svgPos = $('.about-wrapper').offset().top,
+        windowMargin = $(window).height() / 3,
+        startAnimate = wscroll - svgPos + windowMargin,
+        pixelsElapsed = svgPos - wscroll,
+        percentsElapsed = Math.ceil(pixelsElapsed / (svgPos - (svgPos - windowMargin)) * 100),
+        percentsDraw = 500 / 100 * percentsElapsed;
+
+    svg(svgHtml, 50);
+    svg(svgCss, 50);
+    svg(svgjava, 70);
+    svg(svgPhp, 10);
+    svg(svgMysql, 80);
+    svg(svgNode, 80);
+    svg(svgMongo, 90);
+    svg(svgGit, 60);
+    svg(svgGulp, 40);
+    svg(svgBower, 30);
+
+    function svg(block, dash) {
+
+      if (startAnimate >= 0) {
+        var drawAmount = percentsDraw;
+        if (drawAmount > 0 && drawAmount >= dash) {
+          block.css({
+            'stroke-dashoffset': drawAmount
+          });
+        }
+      }
+    }
+  })();
+});
 
 //КАРТА
+google.maps.event.addDomListener(window, 'load', initialize);
+
 function initialize() {
   var mapProp = {
-    center:new google.maps.LatLng(59.9289317,30.2943374),
+    center:new google.maps.LatLng(59.8589317,30.1043374),
     zoom:10,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
@@ -84,9 +110,6 @@ function initialize() {
   };
   var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
 
 // смена формы логин-авторизация
 (function() {
@@ -111,12 +134,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
     container.toggle();
   });
 }());
-/*
+
+
 ////   ****** HAMBURGER
 document.getElementById('burgericon').addEventListener('click', function (e) {
   this.classList.toggle('open');
-});*/
-/*
+});
+
 //// СТАТЬИ В БЛОГЕ
 $(window).scroll(function() {
   var
@@ -129,9 +153,9 @@ $(window).scroll(function() {
 
   if (wScroll >= stickyStart) {
 
-     menu.css({
-     	top : wScroll - stickyStart + 'px'
-     });
+    //  menu.css({
+    //  	top : wScroll - stickyStart + 'px'
+    //  });
 
     if (!fixedSidebar.find('.menu-wrapper').length) {
       fixedSidebar.append(menuClone);
@@ -142,121 +166,106 @@ $(window).scroll(function() {
     fixedSidebar.find('.menu-wrapper').remove();
     menu.show();
   }
-
-});
-
-*/
-
-//slider
-
-(function() {
-  var counter=1;
-  $('.slider-controls-top').on('click',function(e){
-    e.preventDefault();
-
-    var $this=$(this),
-        container = $this.closest('.slider'),
-        items = container.find('.slider-item'),
-        activeItem = container.find('.slider-item.active'),
-        slideshow = $this.closest('.slideshow'),
-        display = container.find('.slideshow-display-pic'),
-        preloader = $('#preloader');
-
-
-    if(counter>= items.length) {
-      counter=0;
-    }
-    var reqItem = items.eq(counter),
-        path = reqItem.attr('href');
-
-    reqItem.animate({
-      'top':'0%'
-    },300, function(){
-      activeItem.removeClass('active').css('top','-100%');
-      $(this).addClass('active');
-    });
-    display.fadeOut(300, function () {
-      preloader.show();
-      display.attr('src', path).load(function () {
-        $(this).fadeIn();
-        preloader.hide();
-      });
-
-    });
-
-
-    counter ++;
-  });
-}());
-
-//анимация кругов при прокрутке
-
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 0) {
-    $('.html').css({
-      'stroke-dasharray':'250 370'
-    });
-  }
 });
 
 
+/*
 //якорь
 $('.anchor').on('click', function(e) {
-
   e.preventDefault();
-
   var target = $(this).attr('href'),
       offset = $(target).offset().top;
 
   $(document).scrollTop(offset);
-
-});
-
+}()); */
 
 
-$(window).scroll(function() {
-  var wscroll = $(window).scrollTop();
-  (function(){
-    var svgHtml = $('.html'),
-        svgCss = $('.css'),
-        svgjava = $('.java'),
-        svgPhp = $('.php'),
-        svgMysql = $('.mysql'),
-        svgNode = $('.node'),
-        svgMongo = $('.mongo'),
-        svgGit = $('.git'),
-        svgGulp = $('.gulp'),
-        svgBower = $('.bower'),
-        svgPos = $('.about-container').offset().top,
-        windowMargin = $(window).height()/3,
-        startAnimate = wscroll - svgPos + windowMargin,
-        pixelsElapsed = svgPos - wscroll,
-        percentsElapsed =  Math.ceil(pixelsElapsed / (svgPos - (svgPos - windowMargin)) * 100),
-        percentsDraw = 200 / 100 * percentsElapsed;
 
-    svg(svgHtml,80);
-    svg(svgCss,50);
-    svg(svgjava,30);
-    svg(svgPhp,10);
-    svg(svgMysql,80);
-    svg(svgNode,80);
-    svg(svgMongo,90);
-    svg(svgGit,60);
-    svg(svgGulp,40);
-    svg(svgBower,30);
+(function(){
+  'use strict';
 
+  var counter = 0;
 
-    function svg(block, dash){
+  var itemPrev = $('.slider__controls-item_prev').find('.slider__img'),
+      itemNext = $('.slider__controls-item_next').find('.slider__img');
+  console.log('.slider__controls-item_prev');
+  if (itemPrev.data('id') === 'work1'){
+    $(this).addClass('active');
+  };
 
-      if (startAnimate >= 0) {
-        var drawAmount = percentsDraw;
-        if (drawAmount > 0 && drawAmount >= dash) {
-          block.css({
-            'stroke-dashoffset' : drawAmount
-          });
-        }
-      }
+  if (itemNext.data('id') === 'work3'){
+    $(this).addClass('active');
+  };
+
+  $('.slider__controls-item_prev').on('click', function(e){
+    e.preventDefault();
+    slider('down');
+  });
+
+  $('.slider__controls-item_next').on('click', function(e){
+    e.preventDefault();
+    slider('up');
+  });
+
+  function slider(direction){
+    var	slider = $('.slider'),
+        container = slider.find('.slider__controls'),
+        imgPrev = container.find('.slider__controls-item_prev').find('.slider__img'),
+        imgNext = container.find('.slider__controls-item_next').find('.slider__img'),
+        activeImgPrev = imgPrev.filter('.active'),
+        activeImgNext = imgNext.filter('.active'),
+        display = slider.find('.slider__display').find('.slider__img'),
+        text = slider.find('.about-me__header'),
+        skills = slider.find('.works__skills-info'),
+        reqImgPrev,
+        reqImgNext;
+
+    if (counter >= imgPrev.length) {
+      counter = 0;
+    };
+
+    if (direction === 'down'){
+      reqImgPrev = imgPrev.eq(counter-1);
+      reqImgNext = imgNext.eq(counter+1);
+    } else {
+      reqImgPrev = imgPrev.eq(counter+1);
+      reqImgNext = imgNext.eq(counter-1);
     }
 
-  })();
-})
+    var	reqImg = imgPrev.eq(counter),
+        name = reqImg.data('name'),
+        description = reqImg.data('description'),
+        path = reqImg.attr('src');
+
+
+    activeImgPrev.animate({
+      'top': '200%'
+    },300);
+    reqImgPrev.animate({
+      'top': '0'
+    },300, function() {
+      activeImgPrev.removeClass('active').css('top', '0');
+      $(this).addClass('active');
+      text.text(name);
+      skills.text(description);
+    });
+
+    activeImgNext.animate({
+      'top': '200%'
+    },300);
+    reqImgNext.animate({
+      'top': '0'
+    },300, function() {
+      activeImgNext.removeClass('active').css('top', '0');
+      $(this).addClass('active');
+      text.text(name);
+      skills.text(description);
+    });
+
+    display.fadeOut(function() {
+      $(this).attr('src', path).fadeIn();
+    });
+
+    counter++;
+  };
+})();

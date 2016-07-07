@@ -84,7 +84,7 @@ function call() {
         }
     });
 } */
-
+/*
 
 
 $('.btn-works').on('click', function (e) {
@@ -115,3 +115,5 @@ $('.btn-works').on('click', function (e) {
         contentType: false // При отсылке данных на сервер, указывайте тип данных. По умолчанию: «application/x-www-form-urlencoded», что подходит для большинства случаев.
     });
 });
+
+*/

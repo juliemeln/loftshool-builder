@@ -189,58 +189,48 @@ input {
   transform: rotate(90deg);
 }
 .progress {
-  -webkit-transition: all 10s;
-  transition: all 10s;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 .html{
   stroke: #10c1a8;
-  stroke-dashoffset: 200px;
-  stroke-dasharray: 250, 370;
+  stroke-dasharray: 340, 450;
 }
 .css{
   stroke: #10c1a8;
-  stroke-dashoffset: 100px;
-  stroke-dasharray: 220, 370;
+  stroke-dasharray: 320, 500;
 }
 .java{
   stroke: #10c1a8;
-  stroke-dashoffset: 20px;
-  stroke-dasharray: 150, 370;
+  stroke-dasharray: 200, 500;
 }
 .php {
   stroke: #10c1a8;
-  stroke-dashoffset: 160px;
-  stroke-dasharray: 80, 370;
+  stroke-dasharray: 80, 500;
 }
 .mysql{
   stroke: #10c1a8;
-  stroke-dashoffset: 160px;
-  stroke-dasharray: 150, 370;
+  stroke-dasharray: 150, 500;
 }
 .node{
   stroke: #10c1a8;
-  stroke-dashoffset: 60px;
-  stroke-dasharray: 200, 370;
+  stroke-dasharray: 100, 500;
 }
 .mongo{
   stroke: #10c1a8;
-  stroke-dashoffset: 180px;
-  stroke-dasharray: 140, 600;
+  stroke-dasharray: 100, 500;
 }
 .git{
   stroke: #10c1a8;
-  stroke-dashoffset: 160px;
-  stroke-dasharray: 80, 600;
+  stroke-dasharray: 80, 500;
 }
 .gulp{
   stroke: #10c1a8;
-  stroke-dashoffset: 160px;
-  stroke-dasharray: 80, 470;
+  stroke-dasharray: 80, 500;
 }
 .bower{
   stroke: #10c1a8;
-  stroke-dashoffset: 160px;
-  stroke-dasharray: 80, 370;
+  stroke-dasharray: 80, 500;
 }
 
 .circle-text{
