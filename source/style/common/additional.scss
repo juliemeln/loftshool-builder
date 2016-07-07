@@ -128,14 +128,29 @@ h1.foto-name{
 }
 
 
-/*
+
 .parallax{
+  height:100%;
   overflow: hidden;
   position: absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
+  background-image: url("./assets/img/parallax/fon.jpg");
+}
+.parallax-layer{
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  width:3000px;
+  height:100%;
+  margin-left: -1500px;
+  img{
+    bottom:0;
+    display: block;
+    position: absolute;
+  }
 }
 section{
   display: flex;
@@ -147,7 +162,7 @@ section{
 .first{
   background-image: url('/assets/img/parallax/fon.jpg');
 }
-.second{
+.second {
   background-image: url('/assets/img/parallax/1.png');
+}
 
-}*/

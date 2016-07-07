@@ -105,10 +105,22 @@ a{
   float: left;
   width:30%;
   height:1px;
+  @include tablet{
+    display: none;
+  }
+  @include phones{
+    display: none;
+  }
 }
 .right-col{
   float: left;
   width:70%;
+  @include tablet{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
   img {
     display: block;
     max-width: 100%; }
@@ -123,6 +135,7 @@ a{
       margin: 20px 0;
       padding-right:10% ;
     }
+
   }
   .articles:last-child{
     &:after {

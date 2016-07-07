@@ -11,18 +11,10 @@ block wrapper
         .works-title
             h1.title-header Мои работы
                 img(src="/assets/img/works_header.svg")
-        .works-container
-            .site
-                ul.site-desc
-                    li.site-desc-item
-                      h2.title Сайт
-                    li.site-desc-item
-                      .site-tech
-                         | HTML,CSS, JAVASCRIPT
-                    li.site-desc-item
-                      a(href="#").btn Посмотреть сайт
-                        img(src="/assets/img/link.svg")
-            include common/slider-slideshow
+
+        .slider
+            include common/slider
+
         .quote-title
             h1.title-header Что обо мне говорят
                 img(src="/assets/img/about_header.svg")

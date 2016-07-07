@@ -7,16 +7,13 @@
   text-align: center;
   position: absolute;
   z-index: 1;
-  top: 20px;
-  right:20px;
   @include desktop {
     top: 25px;
     right:100px;
   }
   @include laptop {
     top: 25px;
-    right:100px;
-
+    right:40px;
 
   }
   @include tablet {
@@ -52,25 +49,22 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  background: url('../../assets/img/parallax/fon.jpg') no-repeat top;
   @include desktop {
-    background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
+//    background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
     background-size: cover;
   }
   @include laptop {
-    background: url('../../assets/img/bckg-1200.jpg') no-repeat top;
-    min-height: 789px;
+//    background: url('../../assets/img/bckg-1200.jpg') no-repeat top;
     background-size: cover;
-    height: 100vh;
 
   }
   @include tablet {
     background: url('../../assets/img/bckg-tablet.jpg') no-repeat top;
-    min-height: 1024px;
     background-size: cover;
   }
   @include phones {
     background: url('../../assets/img/bckg-iphone.jpg') no-repeat top;
-    min-height: 568px;
     background-size: cover;
   }
 
@@ -177,10 +171,15 @@
   width: 380px;
   height: 400px;
   display: block;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto;
 }
-
+.white-wrapper{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 80px;
+}
 
 .container-white-main, .container-white-enter {
   background-color: rgba(255, 255, 255, .8);
@@ -190,7 +189,8 @@
   position: absolute;
   top:0;
   left: 0;
-
+  width: 380px;
+  height: 400px;
   perspective: 600px;
   @include desktop {
     width: 380px;
@@ -424,7 +424,8 @@
 
 .menu-item-link {
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: rem(16px)}
 
 
 
@@ -498,5 +499,18 @@ input[type="checkbox:checked"] {
 
   background: url(/assets/img/check.png) left top no-repeat;
 }
+.layer{
+  img{
+    width:100%;
+  }
+}
+#scene{
 
-@import 'common/media'
+  margin:-20px;
+  @include phones{
+    display: none;
+  }
+  @include tablet{
+    display: none;
+  }
+}

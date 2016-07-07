@@ -194,43 +194,53 @@ input {
 }
 .html{
   stroke: #10c1a8;
-  stroke-dasharray: 150 370;
+  stroke-dashoffset: 200px;
+  stroke-dasharray: 250, 370;
 }
 .css{
   stroke: #10c1a8;
-  stroke-dasharray: 150 370;
+  stroke-dashoffset: 100px;
+  stroke-dasharray: 220, 370;
 }
 .java{
   stroke: #10c1a8;
-  stroke-dasharray: 100 370;
+  stroke-dashoffset: 20px;
+  stroke-dasharray: 150, 370;
 }
-.php{
+.php {
   stroke: #10c1a8;
-  stroke-dasharray: 50 370;
+  stroke-dashoffset: 160px;
+  stroke-dasharray: 80, 370;
 }
 .mysql{
   stroke: #10c1a8;
-  stroke-dasharray: 50 370;
+  stroke-dashoffset: 160px;
+  stroke-dasharray: 150, 370;
 }
 .node{
   stroke: #10c1a8;
-  stroke-dasharray: 20 370;
+  stroke-dashoffset: 60px;
+  stroke-dasharray: 200, 370;
 }
 .mongo{
   stroke: #10c1a8;
-  stroke-dasharray: 1 370;
+  stroke-dashoffset: 180px;
+  stroke-dasharray: 140, 600;
 }
 .git{
   stroke: #10c1a8;
-  stroke-dasharray: 40 370;
+  stroke-dashoffset: 160px;
+  stroke-dasharray: 80, 600;
 }
 .gulp{
   stroke: #10c1a8;
-  stroke-dasharray: 40 370;
+  stroke-dashoffset: 160px;
+  stroke-dasharray: 80, 470;
 }
 .bower{
   stroke: #10c1a8;
-  stroke-dasharray: 40 370;
+  stroke-dashoffset: 160px;
+  stroke-dasharray: 80, 370;
 }
 
 .circle-text{

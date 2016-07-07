@@ -24,8 +24,8 @@ $(window).scroll(function () {
 });
 
 
-// BLUR
-$(document).ready(function(){
+
+/*$(document).ready(function(){
   setBlur();
 });
 
@@ -42,22 +42,38 @@ function setBlur() {
   blur.css({
     'background-size':imgWidth + 'px' + ' ' + 'auto',
     'background-position': posLeft + 'px' + ' ' + posTop + 'px'
-  });
-}
+  });*/
+
 
 
 //Прелоад
 (function() {
   'use strict';
-$(window).on('load', function () {
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+    $('body').css({
+        'overflow': 'hidden',
+        'height': 100 + 'vh'
+      });
+
+  });
+
+  $(window).on('load', function () {
   var $preloader = $('#page-preloader');
-  
   $preloader.delay(500).fadeOut('slow');
+    $(document).ready(function(){
+  $('body').css({
+    'overflow': '',
+    'height': 100 + '%'
+  });
 });
+
+
+  });
 }()); 
 
 //КАРТА
-/* function initialize() {
+function initialize() {
   var mapProp = {
     center:new google.maps.LatLng(59.9289317,30.2943374),
     zoom:10,
@@ -68,7 +84,8 @@ $(window).on('load', function () {
   };
   var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
-//google.maps.event.addDomListener(window, 'load', initialize); */
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 // смена формы логин-авторизация
@@ -76,7 +93,7 @@ $(window).on('load', function () {
   $('.btn-container').on('click', function(e) {
     e.preventDefault();
     var $this = $(this),
-        container = $this.next('.container-white'),
+        container = $this.next('.white-wrapper'),
         containermain = container.find('.container-white-main'),
         containerenter = container.find('.container-white-enter');
 
@@ -94,12 +111,12 @@ $(window).on('load', function () {
     container.toggle();
   });
 }());
-
+/*
 ////   ****** HAMBURGER
 document.getElementById('burgericon').addEventListener('click', function (e) {
   this.classList.toggle('open');
-});
-
+});*/
+/*
 //// СТАТЬИ В БЛОГЕ
 $(window).scroll(function() {
   var
@@ -112,15 +129,14 @@ $(window).scroll(function() {
 
   if (wScroll >= stickyStart) {
 
-    // menu.css({
-    // 	top : wScroll - stickyStart + 'px'
-    // });
+     menu.css({
+     	top : wScroll - stickyStart + 'px'
+     });
 
     if (!fixedSidebar.find('.menu-wrapper').length) {
       fixedSidebar.append(menuClone);
       menu.hide();
     }
-
 
   } else {
     fixedSidebar.find('.menu-wrapper').remove();
@@ -129,8 +145,7 @@ $(window).scroll(function() {
 
 });
 
-
-
+*/
 
 //slider
 
@@ -198,13 +213,50 @@ $('.anchor').on('click', function(e) {
 });
 
 
-//параллакс
-var section=$('.first');
-$(window).scroll(function () {
-  var scrollTop = -($(window).scrollTop()),
-      speed = section.data('speed'),
-      coords = "50%" + scrollTop / speed + "px";
-  section.css('background-position',coords);
-  
-});
 
+$(window).scroll(function() {
+  var wscroll = $(window).scrollTop();
+  (function(){
+    var svgHtml = $('.html'),
+        svgCss = $('.css'),
+        svgjava = $('.java'),
+        svgPhp = $('.php'),
+        svgMysql = $('.mysql'),
+        svgNode = $('.node'),
+        svgMongo = $('.mongo'),
+        svgGit = $('.git'),
+        svgGulp = $('.gulp'),
+        svgBower = $('.bower'),
+        svgPos = $('.about-container').offset().top,
+        windowMargin = $(window).height()/3,
+        startAnimate = wscroll - svgPos + windowMargin,
+        pixelsElapsed = svgPos - wscroll,
+        percentsElapsed =  Math.ceil(pixelsElapsed / (svgPos - (svgPos - windowMargin)) * 100),
+        percentsDraw = 200 / 100 * percentsElapsed;
+
+    svg(svgHtml,80);
+    svg(svgCss,50);
+    svg(svgjava,30);
+    svg(svgPhp,10);
+    svg(svgMysql,80);
+    svg(svgNode,80);
+    svg(svgMongo,90);
+    svg(svgGit,60);
+    svg(svgGulp,40);
+    svg(svgBower,30);
+
+
+    function svg(block, dash){
+
+      if (startAnimate >= 0) {
+        var drawAmount = percentsDraw;
+        if (drawAmount > 0 && drawAmount >= dash) {
+          block.css({
+            'stroke-dashoffset' : drawAmount
+          });
+        }
+      }
+    }
+
+  })();
+})
