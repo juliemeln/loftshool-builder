@@ -1,4 +1,4 @@
-// BLUR
+/*// BLUR
 $(document).ready(function(){
  setBlur();
  });
@@ -17,4 +17,6 @@ $(document).ready(function(){
          'background-size': imgWidth + 'px' + ' ' + 'auto',
          'background-position': posLeft + 'px' + ' ' + posTop + 'px'
      });
- });
+ }
+
+*/
