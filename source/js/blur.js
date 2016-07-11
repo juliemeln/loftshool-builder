@@ -1,4 +1,4 @@
-/*// BLUR
+// BLUR
 $(document).ready(function(){
  setBlur();
  });
@@ -18,5 +18,3 @@ $(document).ready(function(){
          'background-position': posLeft + 'px' + ' ' + posTop + 'px'
      });
  }
-
-*/

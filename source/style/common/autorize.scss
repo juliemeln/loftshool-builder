@@ -14,16 +14,13 @@
   @include laptop {
     top: 25px;
     right:40px;
-
   }
   @include tablet {
     top: 25px;
     right:20px;
-
   }
   @include phones {
     top: 25px;
-
   }
   @include clearfix;
 }
@@ -210,7 +207,6 @@
   transform-style: preserve-3d;
   &.flip{
     transform: rotateY(0deg );
-
   }
 }
 .container-white-main{
@@ -493,12 +489,13 @@ input[type="checkbox"] + label {
   vertical-align:middle;
   cursor:pointer;
   text-indent: 40px;
-  background: #00bfa5;
-}
-input[type="checkbox:checked"] {
+  background: url(/assets/img/check.png) left top no-repeat;
 
+}
+input[type="checkbox:checked"]  + label:checked {
   background: url(/assets/img/check.png) left top no-repeat;
 }
+
 .layer{
   img{
     width:100%;

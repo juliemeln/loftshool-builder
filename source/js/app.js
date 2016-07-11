@@ -1,3 +1,24 @@
+//Прелоад
+(function() {
+    'use strict';
+    document.addEventListener("DOMContentLoaded", function(event) {
+        console.log("DOM fully loaded and parsed");
+        $('body').css({
+            'height': 100 + 'vh',
+            'overflow': 'hidden'
+        });
+    });
+
+    $(window).on('load', function () {
+        var $preloader = $('#page-preloader');
+        $preloader.delay(500).fadeOut('slow');
+
+        $('body').delay(500).css({
+            'overflow': '',
+            'height': 100 + '%',
+        },"slow");
+
+    });
 
 
 //ФОН
@@ -24,59 +45,38 @@ $(window).scroll(function () {
 });
 
 
-//Прелоад
-(function() {
-  'use strict';
-  document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
-    $('body').css({
-        'overflow': 'hidden',
-        'height': 100 + 'vh'
-      });
-  });
 
-  $(window).on('load', function () {
-  var $preloader = $('#page-preloader');
-    $preloader.delay(500).fadeOut('slow');
-    $(document).ready(function(){
-      $('body').css({
-        'overflow': '',
-        'height': 100 + '%'
-    });
-  });
-  });
-}());
 
 // смена формы логин-авторизация
-(function() {
-  $('.btn-container').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this),
-        container = $this.next('.white-wrapper'),
-        containermain = container.find('.container-white-main'),
-        containerenter = container.find('.container-white-enter');
+    $('.btn-container').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this),
+            c = $this.next('.white-wrapper'),
+            containermain = c.find('.container-white-main'),
+            containerenter = c.find('.container-white-enter');
 
-    $(this).hide();
-    containermain.addClass('flip');
-    containerenter.addClass('flip');
-  });
-}());
+        $(this).hide();
+        containermain.addClass('flip');
+        containerenter.addClass('flip');
+    });
+
+
 
 // зеленое меню поверх
-(function() {
+
   $('.nav-hamburger').on('click', function() {
     var $this=$(this),
         container = $this.parent().prev();
     container.toggle();
   });
-}());
 
-/*
+
+
 ////   ****** HAMBURGER
-document.getElementById('burgericon').addEventListener('click', function (e) {
-  this.classList.toggle('open');
-});
-
+    document.getElementById('burgericon').addEventListener('click', function () {
+        this.classList.toggle('open');
+    });
+}());
 /*
 //якорь
 $('.anchor').on('click', function(e) {

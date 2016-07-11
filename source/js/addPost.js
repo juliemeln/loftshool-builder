@@ -1,4 +1,4 @@
-saveButton.addEventListener('click', function()
+/* saveButton.addEventListener('click', function()
 {
     var data={
         title: postTitle.value,
@@ -9,4 +9,4 @@ saveButton.addEventListener('click', function()
     xhr.open('POST', '/save');
     xhr.setRequestHeader('Content-Type', 'application/json; charset=utf8');
     xhr.send(JSON.stringify(data));
-});
+}); */
