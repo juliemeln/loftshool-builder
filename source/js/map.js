@@ -14,7 +14,7 @@ function initialize() {
 }
 
 
-
+/*
 
 // анимация прогресс-кругов
 (function() {
@@ -66,3 +66,4 @@ function initialize() {
         })();
     });
 })();
+*/

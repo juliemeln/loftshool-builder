@@ -2,9 +2,9 @@
 
 module.exports = [
   './source/template/index.jade',
-  './source/template/login.jade',
   './source/template/works.jade',
   './source/template/blog.jade',
+  './source/template/admin.jade',
   './source/template/about.jade'
     
 ];

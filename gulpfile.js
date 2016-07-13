@@ -33,6 +33,7 @@ $.gulp.task('default', $.gulp.series(
     'main.process',
     'menu.process',
     'map.process',
+    'parallax.process',
     'copy.image',
     'copy.fonts',
     'css.foundation',

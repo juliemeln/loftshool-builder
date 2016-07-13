@@ -1,0 +1,52 @@
+.admin-header{
+  background-color: #00bfa5;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  color: #fff;
+}
+.admin-header__title{
+  font-family: 'robotomedium';
+  font-size: rem(28px);
+}
+.admin-header__back{
+
+}
+.tabs-menu{
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin:0;
+  padding: 0;
+  background: #f0efe9;
+
+}
+.tabs-item{
+  height:60px;
+  width: 180px;
+  border-right: 2px #fff solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active{
+  background: #fff;
+}
+.tabs-link{
+  color: #738085;
+
+}
+#tab2,#tab3{
+  display: none;
+}
+
+.admin-content-container{
+  background: url("/assets/img/admin-background.jpg") top left no-repeat;
+  background-size: cover;
+  min-height:100vh;
+}
+
+.admin-btn{
+  background-color: #00bfa5;
+}

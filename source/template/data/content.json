@@ -24,5 +24,47 @@
       "link": "#",
       "img": "assets/img/4.png"
     }
+  },
+  "tabs": {
+    "tab1": {
+      "id": "tab1",
+      "title": "Обо мне",
+      "name": "Страница 'Обо мне'",
+      "link": "admin-about"
+    },
+    "tab2": {
+      "id": "tab2",
+      "title": "Блог",
+      "name": "Страница 'Блог'",
+      "link": "admin-blog"
+    },
+    "tab3": {
+      "id": "tab3",
+      "title": "Мои работы",
+      "name": "Страница 'Мои работы'",
+      "link": "admin-works"
+    }
+  },
+  "scills": {
+    "Frontend": {
+      "name": "Frontend",
+      "scill1": "Html",
+      "scill2": "Git",
+      "scill3": "PHP"
+    },
+
+    "Workflow":{
+      "name": "Workflow",
+      "scill1": "CSS",
+      "scill2": "Gulp",
+      "scill3": "Node.js"
+    },
+
+    "Backend": {
+      "name": "Backend",
+      "scill1":"JavaScript",
+      "scill2": "Bower",
+      "scill3": "Mongo.db"
+    }
   }
 }

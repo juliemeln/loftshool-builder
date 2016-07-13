@@ -1,17 +1,51 @@
-doctype html
-html
-    include common/_head
-    body
-        <!--[if lt IE 7]>
-        <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-        <![endif]-->
+extends common/_head
+block title
+    title Авторизация
 
-ul
-    li
-        a(href="works.html") | works
-    li
-        a(href="about.html") | about
-    li
-        a(href="login.html") | login
-    li
-        a(href="blog.html") | blog
+block wrapper
+    .wrapper
+        .container
+            include common/_parallax
+
+            .btn-container
+                a(href="#").autorize-btn Авторизоваться
+            .white-wrapper
+                .container-white
+                    .container-white-main
+                        .foto-wrapper
+                            .av-box
+                                img(src="./assets/img/foto.jpg").avatar
+                        .foto-info
+                            h1.foto-name Юлия Мельник
+                            .container-foto-text Личный сайт веб разработчика
+                        ul.socials
+                            li.socials-item
+                                a(href="http://vk.com/",target="blank").socials-link-vk
+                                    img(src="./assets/img/svg/vk.svg")
+                            li.socials-item
+                                a(href="http://github.com/",target="blank").socials-link-git
+                                    img(src="./assets/img/github.svg")
+                            li.socials-item
+                                a(href="http://linkedin.com/",target="blank").socials-link-in
+                                    img(src="./assets/img/in.svg")
+                        ul.menu-list
+                            li.menu-item
+                                a(href="./works.html").menu-item-link Мои работы
+                            li.menu-item
+                                a(href="./about.html").menu-item-link Обо мне
+                            li.menu-item
+                                a(href="./blog.html").menu-item-link Блог
+
+                    .container-white-enter
+                        h2.title Авторизуйтесь
+                        .container-form
+                            include common/_form-login
+                        ul.menu-atorization-list
+                            li.menu-autorization-item-main
+                                a(href="index.html") На главную
+                            li.menu-autorization-item-enter
+                                a(href="#") Войти
+
+
+
+        include ./common/_footer.jade

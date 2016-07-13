@@ -1,0 +1,29 @@
+.admin-content-container
+    .admin-content-header #{tabs.tab1.name}
+    .admin-skills
+        .admin-skills-name #{scills.Frontend.name}
+        ul.admin-skills-list
+            each scill, id in scills
+                li.admin-skills-item
+                    .admin-skills-item_name #{scill.scill1}
+                    label.skills-label
+                        input(type="text").skills-input
+                        | %
+        .admin-skills-name #{scills.Workflow.name}
+        ul.admin-skills-list
+            each scill, id in scills
+                li.admin-skills-item
+                    .admin-skills-item_name #{scill.scill1}
+                    label.skills-label
+                        input(type="text").skills-input
+                        | %
+
+        .admin-skills-name #{scills.Backend.name}
+        ul.admin-skills-list
+            each scill, id in scills
+                li.admin-skills-item
+                    .admin-skills-item_name #{scill.scill1}
+                    label.skills-label
+                        input(type="text").skills-input
+                        | %
+        input(type="button" value="Сохранить").admin-btn

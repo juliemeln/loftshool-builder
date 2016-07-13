@@ -45,8 +45,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 650px;
   height: 100vh;
   background: url('../../assets/img/parallax/fon.jpg') no-repeat top;
+  &:after {
+    content: '';
+    display: block;
+    height: 150px; // Равно высоте футера
+  }
   @include desktop {
 //    background: url('../../assets/img/bckg-1800.jpg') no-repeat top;
     background-size: cover;
@@ -270,12 +276,7 @@
   background-position: 50% 50%;
   background-color: #f0efe9;
 }
-.checkbox{
-  width:30%;
-  margin: 0 auto;
-  padding: 10px 0;
-  font-family: 'robotomedium';
-}
+
 .question{
   text-align: center;
   padding-bottom: 10px;
@@ -479,22 +480,32 @@
   margin: 0 auto;
 }
 
+/* CHECKBOX*/
+
+.checkbox-wrapper{
+  text-align: center;
+}
+
 input[type="checkbox"] {
   display:none;
 }
-input[type="checkbox"] + label {
-  display:inline-block;
-  width:20px;
-  height:20px;
-  vertical-align:middle;
-  cursor:pointer;
-  text-indent: 40px;
-  background: url(/assets/img/check.png) left top no-repeat;
 
+input[type="checkbox"] + label:before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/img/check.png") -20px top no-repeat;
+  content:'';
+  cursor: pointer;
+  margin-right: 20px;
 }
-input[type="checkbox:checked"]  + label:checked {
-  background: url(/assets/img/check.png) left top no-repeat;
+  input[type="checkbox"]:checked + label:before{
+    background:url("../../assets/img/check.png") 0px top no-repeat;
 }
+
+
+
+
 
 .layer{
   img{

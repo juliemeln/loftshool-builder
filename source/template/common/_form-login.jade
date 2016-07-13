@@ -6,9 +6,10 @@ form(name="input", action="", method="get")
     .input-field
       label.pswd
       input(type="text", name="pswd", placeholder="Пароль",class="login-form",required)
-    .checkbox
-      input(type="checkbox", name="human", id="human")
-      label Я человек
+    .checkbox-wrapper
+      input(type="checkbox" name="human" id="human").checkbox
+      label(for="human") Я человек
+
   div.question Вы точно не робот?
   ul.robot
     li.robot-item
